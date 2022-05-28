@@ -1,0 +1,381 @@
+/* 
+    CSS for www.sheldoc.ca
+    By Sheldon Codling
+    On Monday, January 24th, 2022
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile {
+    display: inline;
+}
+
+.desktop {
+    display: none;
+}
+
+@font-face {
+    font-family: ubuntu;
+    src: url(../Fonts/Ubuntu-Medium.woff2) format("woff2"),
+        url(../Fonts/Ubuntu-Regular.woff) format("woff"),
+        url(../Fonts/Ubuntu-Regular.ttf) format("truetype");
+}
+
+:root {
+    --button-bg-color: #292F36;
+    --infobox-bg-color: #1c2025;
+    --highlight-green: #1dd1a1;
+    --page-max-width: 92%;
+}
+
+html {
+    height: auto;
+}
+
+/* Mobile and defaults */
+body {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: ubuntu;
+    height: 100%;
+    min-height: 100vh;
+    line-height: 1.5;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--highlight-green)
+}
+
+#bgWrapper {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 100vh;
+    background: #1dd1a1 url(../Images/greenGradient.svg);
+    background-position: center; 
+    background-size: cover;
+    z-index: -2;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: var(--page-max-width);
+    padding: 5px 0;
+    opacity: 1;
+    height: 100%;
+    transition: opacity 50ms linear;
+    /* transition: opacity 2000ms ease 0s, height 1ms ease 200ms; */
+}
+
+header #topPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#outerHexagon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); 
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color: var(--button-bg-color);
+    width: 25vw;
+    height: 28.867vw;
+    min-width: 250px;
+    min-height: 296.4px;
+}
+
+#innerHexagon {
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); 
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-image: url(../Images/Portrait.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 24.479vw;
+    height: 28.347vw;
+    min-width: 245px;
+    min-height: 291.4px;
+}
+
+/* Intro Paragraph Stuff */
+#introParagraph {
+    margin: 10px 0;
+    color: white;
+    max-width: 640px;
+    padding: 20px 40px;
+}
+
+#introParagraph h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#introParagraph p {
+    margin-bottom: 1em;
+}
+
+#introParagraph p:last-child {
+    margin-bottom: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 65vw;
+}
+
+nav .navBtn {
+    display: flex;
+    align-items: center;
+    background: var(--button-bg-color);
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+    height: 55px;
+    box-shadow: 0 3px black;
+}
+
+nav .navBtn .infoBox {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: var(--infobox-bg-color);
+    border-radius: 6px 0 0 6px;
+    padding: 15px;
+    justify-content: center;
+}
+
+nav .navBtn .btnTitle {
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    top: 0;
+    width: 100%; height: 100%;
+}
+
+/* Individual page stuff */
+.page-wrapper {
+    position: absolute;
+    max-width: 950px;
+    width: 95%;
+    overflow: hidden;
+    color: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 0;
+    top: 0;
+    transition: transform 500ms ease-out;
+}
+
+.page {
+    background-color: var(--button-bg-color);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Page title stuff */
+.page .articleTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 0px;
+}
+
+.page .titleUnderline {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+.page .titleUnderline .underCircle {
+    height: 10px; width: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--highlight-green);
+}
+.page .titleUnderline .underLine {
+    height: 2px;
+    width: 100%;
+    background: var(--highlight-green);
+    margin: 0 10px;
+}
+
+.page .closeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; width: 40px;
+    transition: 500ms;
+}
+
+.page .closeBtn:hover svg {
+    stroke: #1dd1a1;
+}
+
+/* Page body stuff */
+.page .articleBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.page .articleBody p {
+    max-width: 580px;
+    margin: 0 auto;
+    margin: 1.2em 0;
+}
+
+/* Class to give the current page with JavaScript*/
+.pageIsVisible {
+    height: auto;
+    padding: 20px 0;
+    opacity: 1;
+}
+
+.pageOffScreen {
+    transform: translateY(calc(100vh + 1px));
+    -webkit-transform: translateY(calc(100vh + 1px));
+}
+
+.mainSectionInvisible {
+    opacity: 0;
+}
+
+/* Skills Stuff */
+#mySkills2 .skillSect {
+    margin-bottom: 20px;
+}
+
+#mySkills2 .skillIcon {
+    display: flex;
+    justify-content: center;
+    width: 125px;
+    height: 125px;
+    background: linear-gradient(#10AC84, var(--highlight-green));
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+#mySkills2 img {
+    margin: 20px;
+}
+
+#mySkills2 h4 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Projects Stuff */
+#myProjects2 .indvProject {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#myProjects2 .projectTitle {
+    text-decoration: underline;
+}
+
+#myProjects2 .visitBtn {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background-color: var(--highlight-green);
+    padding: 11px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+#myProjects2 .visitBtn:hover {
+    background-color: #f8f8ff;
+}
+
+#myProjects2 img {
+    width: 95%;
+    max-width: 580px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+#mySkills2 p {
+    padding: 0;
+    text-align: center;
+    margin-top: 0px;
+}
+
+/* Contact Me Stuff */
+#contactMe2 form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--highlight-green);
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#contactMe2 input, textarea {
+    margin-bottom: 7px;
+    padding: 7px;
+}
+
+#contactMe2 input:focus, textarea:focus {
+    outline: red;
+}
+
+#contactMe2 #submitBtn {
+    padding: 2px;
+    width: min-content;
+    font-weight: bolder;
+}
+
+/* Resume Stuff */
+#myResume2 img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1279px) {
+    
+    header #topPart {
+        margin-bottom: 30px;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+}
