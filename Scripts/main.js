@@ -5,9 +5,13 @@ let projects = document.getElementById("myProjects2");
 let contact = document.getElementById("contactMe2");
 let resume = document.getElementById("myResume2");
 // Array to hold the pages
-let pageList = [about, projects]/*, contact, resume];*/
+let pageList = [about, projects, contact, resume];
 // Main section
 let mainSection = document.getElementById("header");
+// Boolean to check if this is the first time the page has loaded (needed for fade in effect and hiding pages)
+let firstLoad = true;
+// Variable to hold the current page
+let currentPage = "";
 
 /* 
 WHAT NEEDS TO HAPPEN
@@ -36,41 +40,53 @@ WHAT NEEDS TO HAPPEN
     3. main section starts to fade back in
 */
 
-function hidePage(currPage) {
-    currPage.addEventListener("transitionend", removePage);
-    currPage.classList.add("pageOffScreen");
+function hidePage(page) {
+    page.addEventListener("transitionend", removePage);
+    page.classList.add("pageOffScreen");
     mainSection.style.display = "flex";
     function removePage() {
-        currPage.classList.remove("pageIsVisible");
+        page.classList.remove("pageIsVisible");
         mainSection.classList.remove("mainSectionInvisible");
-        currPage.removeEventListener("transitionend", removePage);
+        page.removeEventListener("transitionend", removePage);
     }
 }
 
 function checkHashChange(/*currentPage*/) {
-    currentPage = window.location.hash;
+    let currentHash = window.location.hash;
 
-    switch(currentPage) {
+    switch(currentHash) {
         case "#aboutMe":
-            console.log("You are on the about me page");
+            console.log("You are on the " + about.id + " page");
+            currentPage = about.id;
+            console.log("a: " + currentPage); 
             showPage(about);
             break;
         case "#mySkills":
             console.log("You are on the projects page");
-            showPage(skills)
+            currentPage = skills.id;
+            showPage(skills);
             break;
         case "#myProjects":
             console.log("You are on the projects page");
-            showPage(projects)
+            currentPage = projects.id;
+            showPage(projects);
             break;
         case "#contactMe":
             console.log("You are on the contact me page");
-            showPage(contact)
+            currentPage = contact.id;
+            showPage(contact);
             break;
         case "#myResume":
             console.log("You are on the resume page");
-            showPage(resume)
+            currentPage = resume.id;
+            showPage(resume);
             break;
+        default:
+            console.log("You are on the home page");
+            if (currentPage !== "") {
+                hidePage(document.getElementById(currentPage))
+                currentPage = "";
+            }
     }
 }
 

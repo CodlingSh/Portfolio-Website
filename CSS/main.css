@@ -73,10 +73,10 @@ header {
     flex-direction: column;
     justify-content: space-around;
     max-width: var(--page-max-width);
-    padding: 20px 0;
+    padding: 5px 0;
     opacity: 1;
     height: 100%;
-    transition: opacity 100ms linear;
+    transition: opacity 50ms linear;
     /* transition: opacity 2000ms ease 0s, height 1ms ease 200ms; */
 }
 
@@ -114,6 +114,9 @@ header #topPart {
 /* Intro Paragraph Stuff */
 #introParagraph {
     margin: 10px 0;
+    color: white;
+    max-width: 640px;
+    padding: 20px 40px;
 }
 
 #introParagraph h1 {
@@ -136,7 +139,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     margin: 0 auto;
-    width: 75vw;
+    width: 65vw;
 }
 
 nav .navBtn {
@@ -193,12 +196,13 @@ main {
     justify-content: center;
     height: 0;
     top: 0;
-    transition: transform 600ms ease-out;
+    transition: transform 500ms ease-out;
 }
 
 .page {
     background-color: var(--button-bg-color);
-    padding: 0 0 10px;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 /* Page title stuff */
@@ -346,6 +350,11 @@ main {
 
 #contactMe2 input, textarea {
     margin-bottom: 7px;
+    padding: 7px;
+}
+
+#contactMe2 input:focus, textarea:focus {
+    outline: red;
 }
 
 #contactMe2 #submitBtn {
@@ -361,6 +370,10 @@ main {
 
 @media only screen and (min-width: 1279px) {
     
+    header #topPart {
+        margin-bottom: 30px;
+    }
+
     nav {
         flex-direction: row;
     }
