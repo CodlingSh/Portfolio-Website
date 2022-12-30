@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "https://cors-anywhere.herokuapp.com/www.sheldonc.ca/fetchTest", true);
+        xhr.responseType = "document";
+
+        xhr.onload = function() {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            var response = xhr.responseXML;
+            console.log(response)
+          }
+        };
+
+        xhr.onerror = function() {
+          console.error(xhr.status, xhr.statusText)
+        }
+
+        xhr.send();
+    </script>
+</body>
+</html>
