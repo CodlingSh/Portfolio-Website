@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Sheldon Codling's portfolio website">
+    <meta name="keywords" content="Sheldon, Codling, Sarnia, Canada, programmer, web, developer, javascript, python, java, bash, portfolio">
+    <meta name="author" content="Sheldon Codling">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheldon Codling</title>
+    <!-- CODE FOR FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#3daee9">
+    <meta name="msapplication-TileColor" content="#3daee9">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/main.css">
+    <style id="jsStyle">
+        
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div id="navContainer">
+            <h1 id="pageName">Sheldon Codling</h1>
+            <div class="desktop">
+                <ul>
+                    <li><a class="link" id="homeLink" class="active" href="#">Home</a></li>
+                    <li><a class="link" id="aboutLink" href="#about">About</a></li>
+                    <li><a class="link" id="skillsLink" href="#skills">Skills</a></li>
+                    <li><a class="link" id="projectLink" href="#projects">Projects</a></li>
+                    <li><a class="link" id="contactLink" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile">
+                <div id="navBtn">
+                    <img src="assets/icons/menu.svg" width="39" height="39" alt="navigation">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="navMenu">
+        <ul>
+            <li><a id="homeLinkMobile" class="active" href="#">Home</a></li>
+            <li><a id="aboutLinkMobile" href="#about">About</a></li>
+            <li><a id="skillsLinkMobile" href="#skills">Skills</a></li>
+            <li><a id="projectLinkMobile" href="#projects">Projects</a></li>
+            <li><a id="contactLinkMobile" href="#contact">Contact</a></li>
+        </ul>
+    </section>
+
+    <!--<nav>
+        <h1>Sheldon Codling</h1>
+        <div id="navBar">
+            <a id="homeLink" class="active" href="#">Home</a>
+            <a id="aboutLink" href="#about">About</a>
+            <a id="skillsLink" href="#skills">Skills</a>
+            <a id="projectLink" href="#projects">Projects</a>
+            <a id="contactLink" href="#contact">Contact</a>
+        </div>
+    </nav>-->
+
+    <div id="opacityLayer"></div>
+
+    <header id="landing">
+        <div id="outerHexagon">
+            <div id="innerHexagon"></div>
+        </div>
+        <div id="sideSect">
+            <div id="introText">
+                <h1>Hello!<br>I'm Sheldon Codling</h1>
+                <p>A passionate full stack web developer from Sarnia, Canada</p>
+            </div>
+            <div id="btnGroup">
+                <a href="https://github.com/CodlingSh" class="btn heroBtn"><img src="assets/icons/github.svg" width="33" height="26" alt="See My Work"><p>Github</p></a>
+                <a href="https://www.linkedin.com/in/codlinsh/" class="btn heroBtn"><img src="assets/icons/linkedin.svg" width="33" height="26" alt="See My Work"><p>LinkedIn</p></a>
+                <a href="/assets/Sheldon Codling's Resume.pdf" class="btn heroBtn"><img src="assets/icons/myResume.svg" width="19" height="26" alt="View Resume"><p>Resume</p></a>
+                <!-- <a href="#" class="btn heroBtn"><img src="assets/icons/myResume.svg" width="19" height="26" alt="View Resume">Github</a> -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="mainSect">
+            <div id="aboutSect" class="innerSectContainer">
+                <h2 class="sectTitle">About Me</h2>
+                <p>Since I was four years old, I have been interested in working, playing, and creating on computers. My family owned a 386-based PC, which sparked my passion for computers and allowed me to learn about various Linux distributions and Windows.</p>
+                <p>In 2013, I enrolled in Lambton College's "Computer Network Specialist" course to learn about system repair, network setup, Cisco equipment, and computer/server maintenance. Later, I pursued further education by enrolling in the "Computer Programmer" course, where I learned about HTML5/CSS3, JavaScript, Python, SQL, and self-taught Lua and Bash.</p>
+                <p>I have built a good reputation and completed several programming projects, including designing and coding a website for a local business and creating a local password generator.</p>
+                <p>In my free time, I enjoy playing video games, mountain biking, watching action or sci-fi movies, growing peppers, and experimenting with various Linux distributions.</p>
+                <p>Thank you for learning more about me. If you have any questions, please don't hesitate to contact me.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="mainSect">
+            <div id="skillSect" class="innerSectContainer">
+                <h2 class="sectTitle">My Skills</h2>
+
+                <h3 class="skillGroupTitle">Programming Langauges</h3>
+                <div class="skillGroup">
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Bash-Light.svg" width="95" height="95" alt="C Sharp">
+                        <p>Bash</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/CS.svg" width="95" height="95" alt="C Sharp">
+                        <p>C#</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Java-Light.svg" width="95" height="95" alt="Java">
+                        <p>Java</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/JavaScript.svg" width="95" height="95" alt="Javascript">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Lua-Light.svg" width="95" height="95" alt="Lua">
+                        <p>Lua</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Python-Light.svg" width="95" height="95" alt="Python">
+                        <p>Python</p>
+                    </div>
+                </div>
+
+                <h3 class="skillGroupTitle">Front-End</h3>
+                <div class="skillGroup">
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Bootstrap.svg" width="95" height="95" alt="Bootstrap">
+                        <p>Bootstrap</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/CSS.svg" width="95" height="95" alt="CSS">
+                        <p>CSS</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/HTML.svg" width="95" height="95" alt="HTML">
+                        <p>HTML</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/React-Light.svg" width="95" height="95" alt="React">
+                        <p>React</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/TailwindCSS-Light.svg" width="95" height="95" alt="TailwindCSS">
+                        <p>Tailwind CSS</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Wordpress.svg" width="95" height="95" alt="Wordpress">
+                        <p>WordPress</p>
+                    </div>
+                </div>
+
+                <h3 class="skillGroupTitle">Back-End and Databases</h3>
+                <div class="skillGroup">
+                    <div class="box skillBox">
+                        <img src="/assets/icons/DotNet.svg" width="95" height="95" alt="Dot Net">
+                        <p>ASP.NET</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Django.svg" width="95" height="95" alt="Django">
+                        <p>Django</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Flask-Light.svg" width="95" height="95" alt="Flask">
+                        <p>Flask</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/MongoDB.svg" width="95" height="95" alt="MongoDB">
+                        <p>MongoDB</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/NodeJS-Light.svg" width="95" height="95" alt="Node JS">
+                        <p>Node.js</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/MySQL-Light.svg" width="95" height="95" alt="MySQL">
+                        <p>MySQL</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Spring-Light.svg" width="95" height="95" alt="Spring">
+                        <p>Spring</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/SQLite.svg" width="95" height="95" alt="SQLite">
+                        <p>SQLite</p>
+                    </div>
+                </div>
+
+                <h3 class="skillGroupTitle">Other Tech Skills</h3>
+                <div class="skillGroup">
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Arduino.svg" width="95" height="95" alt="Arduino">
+                        <p>Arduino</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/AWS-Light.svg" width="95" height="95" alt="Amazon Web Services">
+                        <p>AWS</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/GIMP.svg" width="95" height="95" alt="GNU Image Manipulation Program">
+                        <p>G.I.M.P</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Git.svg" width="95" height="95" alt="Git">
+                        <p>Git</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Inkscape_Logo.svg" width="95" height="95" alt="Inkscape">
+                        <p>Inkscape</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Kdenlive.svg" width="95" height="95" alt="Kdenlive">
+                        <p>KDENLive</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Linux-Light.svg" width="95" height="95" alt="Linux">
+                        <p>Linux</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/Netlify-Light.svg" width="95" height="95" alt="Netlify">
+                        <p>Netlify</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/RaspberryPi-Light.svg" width="95" height="95" alt="Raspberry Pi">
+                        <p>Raspberry Pi</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/VIM-Light.svg" width="95" height="95" alt="VIM">
+                        <p>Vim</p>
+                    </div>
+                    <div class="box skillBox">
+                        <img src="/assets/icons/VSCode-Light.svg" width="95" height="95" alt="VS Code">
+                        <p>VS Code</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mainSect">
+            <div class="innerSectContainer">
+                <h2 class="sectTitle">My Projects</h2>
+
+                <div class="projects">
+                        <div class="box projectBox">
+                            <div class="closeBtn">
+                                <img src="/assets/icons/x.svg" width="42" height="42" alt="close"> 
+                            </div>
+                            <div class="projectBG"></div>
+                            <img src="assets/images/projects/Lions.avif" height="195" width="380" alt="project">
+                            <a class="projectLink" href="http://lionseyesright.ca/"><h2 class="projectTitle">Lions Eyes Right</h2></a>
+                            <h3 class="toolsTitle hiddenText">Tools Used:</h3>
+                            <ul class="toolsUsed">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                            </ul>
+                            <p class="headline visibleText">A website I made to help promote the District A1 Lions Club's Eyes Right project.</p>
+                            <div class="hiddenText">
+                                <p>"Eyes Right" is a registered charity organization under the jurisdiction of the District A1 Lions Club in Southwestern Ontario that aims to raise funds for eye care initiatives in the region. My Grandpa did a lot of volunteer work for the organization, which left me with a lot fo respect for the work they do. So when the opportunity arose to remake their website, I was happy to take up the offer.</p>
+                                <p>My main goal for this website was to make it completely accessable to the visually impaired. Which is why I decided to make the images on the website slightly bigger than what I usually would and I spent a lot of time learning how screen readers interact with websites in order to make sure that the Eyes Right website is as accesible as possible. Overall, I really like how well this website turned out. Between the good cause and the layout, this is easily my favorite static website I have done so far.</p>
+                            </div>
+                            <p class="btn projectBtn visibleText">More Info</p>
+                        </div>
+
+                        <div class="box projectBox">
+                            <div class="closeBtn">
+                                <img src="/assets/icons/x.svg" width="42" height="42" alt="close"> 
+                            </div>
+                            <div class="projectBG"></div>
+                            <img src="assets/images/projects/BrandonDoes.avif" height="195" width="380" alt="project">
+                            <a class="projectLink" href="https://www.brandondoes.org/"><h2 class="projectTitle"> Brandon Does Yoga</h2></a>
+                            <h3 class="toolsTitle hiddenText">Tools Used:</h3>
+                            <ul class="toolsUsed">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <p class="headline visibleText">A website I made to help advertise my friend's yoga practice.</p>
+                            <div class="hiddenText">
+                                <p>Brandon is a friend I met online a few years ago when I was in college. He found out that I'm interested in web development and asked if I could create a website for his yoga practice.</p>
+                                <p>My favorite part of the website is the "quote of the day" on the front page. I decided to make the website static, which means it doesn't need complex server technology. I used a simple technique called JavaScript to select a quote based on the date from a file with information stored in a special format called JSON. This way, every person who visits the website will see the same quote, even though there is no complicated code running on the website's server.</p>
+                            </div>
+                            <p class="btn projectBtn visibleText">More Info</p>
+                        </div>
+
+                        <div class="box projectBox">
+                            <div class="closeBtn">
+                                <img src="/assets/icons/x.svg" width="42" height="42" alt="close"> 
+                            </div>
+                            <div class="projectBG"></div>
+                            <img src="assets/images/projects/KMT.avif" height="195" width="380" alt="project">
+                            <a class="projectLink" href="https://www.kipsmediatransfers.ca/"><h2 class="projectTitle">Kip's Media Transfers</h2></a>
+                            <h3 class="toolsTitle hiddenText">Tools Used:</h3>
+                            <ul class="toolsUsed">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <p class="headline visibleText">A website I made the help advertise my cousin's media transfer business</p>
+                            <div class="hiddenText">
+                                <p>Kip is my cousin, and he runs a small local company that converts old video formats into DVDs or digital files. This was the first website I created, and I'm happy with how it looks. It's been rewarding to see people share the website on social media from time to time. I also had the opportunity to do some cool things with the website, like turning Kip's Dad's hand-drawn artwork into digital files.</p>                            
+                            </div>
+                            <p class="btn projectBtn visibleText">More Info</p>
+                        </div>
+
+                        <div class="box projectBox">
+                            <div class="closeBtn">
+                                <img src="/assets/icons/x.svg" width="42" height="42" alt="close"> 
+                            </div>
+                            <div class="projectBG"></div>
+                            <img src="assets/images/projects/SarniaSmash.avif" height="195" width="380" alt="project">
+                            <a class="projectLink" href="https://sarniasmashbros.ca/"><h2 class="projectTitle">Sarnia Smash Bros</h2></a>
+                            <h3 class="toolsTitle hiddenText">Tools Used:</h3>
+                            <ul class="toolsUsed">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <p class="headline visibleText">A website I made with <a href="https://github.com/Johnny-creator">Jonathan Nano</a> to promote our local Super Smash Brothers club.</p>
+                            <div class="hiddenText">
+                                <p>Johnathan was a classmate of mine in the computer programming program, and he's really into Sarnia's Super Smash Brothers Club. After we graduated, he got the opportunity to create a website for the club and asked if I wanted to help. Johnathan took care of most of the design, and we divided the pages between us. Specifically, I worked on the contact and rules pages and edited the majority of the images.</p>
+                                <p>I'm really happy with how the website turned out. I liked collaborating with Johnathan as we were able to combine our design styles to create a nice overall look that I wouldn't have been able to achieve without him. I'm personally proud of the flipping effect I created for the contact form.</p>
+                            </div>
+                            <p class="btn projectBtn visibleText">More Info</p>
+                        </div>
+
+                        <div class="box projectBox">
+                            <div class="closeBtn">
+                                <img src="/assets/icons/x.svg" width="42" height="42" alt="close"> 
+                            </div>
+                            <div class="projectBG"></div>
+                            <img src="assets/images/projects/tkHangman.avif" height="195" width="380" alt="project">
+                            <a class="projectLink" href="https://github.com/CodlingSh/tkHangman"><h2 class="projectTitle">TkHangman</h2></a>
+                            <h3 class="toolsTitle hiddenText">Tools Used:</h3>
+                            <ul class="toolsUsed">
+                                <li>Python</li>
+                                <li>Tk</li>
+                            </ul>
+                            <p class="headline visibleText">A hangman game I made in order to get a better understanding of the Tk toolkit and GUI's in general.</p>
+                            <p class="hiddenText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi iure voluptatum animi incidunt sint quibusdam nulla nisi perferendis tempore eveniet velit recusandae quod mollitia praesentium adipisci quisquam, libero nam corrupti?</p>
+                            <p class="btn projectBtn visibleText">More Info</p>
+                        </div>
+
+                        <div class="box projectBox">
+                            <div class="closeBtn">
+                                <img src="/assets/icons/x.svg" width="42" height="42" alt="close"> 
+                            </div>
+                            <div class="projectBG"></div>
+                            <img src="assets/images/projects/portfolio.avif" height="195" width="380" alt="project">
+                            <a class="projectLink" href="https://www.sheldonc.ca"><h2 class="projectTitle">My Portfolio Site</h2></a>
+                            <h3 class="toolsTitle hiddenText">Tools Used:</h3>
+                            <ul class="toolsUsed">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <p class="headline visibleText">The Website you are currently looking at! Made to show off my work and personality.</p>
+                            <p class="hiddenText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi iure voluptatum animi incidunt sint quibusdam nulla nisi perferendis tempore eveniet velit recusandae quod mollitia praesentium adipisci quisquam, libero nam corrupti?</p>
+                            <p class="btn projectBtn visibleText">More Info</p>
+                        </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="mainSect">
+
+            <div id="contactBG"></div>
+
+            <div class="innerSectContainer">
+                <div id="formContainer">
+                    <h2 class="sectTitle">Contact Me</h2>
+                    
+                    <!-- Dummy iFrame to stop redirecting to a new page -->
+                    <iframe name="dummyFrame" id="dummyFrame" style="display: none;"></iframe>
+
+                    <form name='contactForm' target="dummyFrame" method='POST' onsubmit="return validateForm()" action="/"><input type='hidden' name='form-name' value='contact'>
+                        <!-- Name -->
+                        <div class="inputContainer">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        <div class="errorMessage"><span class="errorAsterix">* </span><span id="nameError"></span></div>
+                        <!-- Email -->
+                        <div class="inputContainer">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <div class="errorMessage"><span class="errorAsterix">* </span><span id="emailError"></span></div>
+                        <!-- Message -->
+                        <div class="inputContainer">
+                            <label for="messageBox">Your Message</label>
+                            <textarea id="messageBox" name="messageBox" rows="14"></textarea>
+                        </div>
+                        <div class="errorMessage"><span class="errorAsterix">* </span><span id="messageError"></span></div>
+                        <!-- Submit Button -->
+                        <input type="submit" id="submitBtn" class="btn projectBtn" value="Send Message">
+                        <div id="thankYouMessage">
+                            <p>Thank you for your message. I will get back to you as soon as possible.</p>
+                            <div id="resetButton" class="btn projectBtn">Send Another Message</div>
+                        </div>
+                    </form>
+
+                    
+
+                    <section id="contactInfo">
+                        <div class="contactImg"><div class=contactImgContainer><img src="assets/icons/email.svg" alt="email" width="20" height="20"></div><a href="mailto:codlinsh@gmail.com">codlinsh@gmail.com</a></div>
+                        <div class="contactImg"><div class=contactImgContainer><img src="assets/icons/github.svg" alt="github" width="20" height="20"></div><a href="https://github.com/CodlingSh">github.com/CodlingSh</a></div>
+                        <div class="contactImg"><div class=contactImgContainer><img src="assets/icons/linkedin.svg" alt="linkedin" width="20" height="20"></div><a href="https://www.linkedin.com/in/codlinsh/">linkedin.com/in/codlinsh/</a></div>
+                    </section>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer><p>©<span id="currentYear">2021</span> Sheldon Codling</p></footer>
+    
+    <script src="scripts/script.js"></script>
+</body>
+</html>

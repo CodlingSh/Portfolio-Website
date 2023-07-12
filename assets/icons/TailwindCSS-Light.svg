@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="256"
+   height="256"
+   fill="none"
+   viewBox="0 0 256 256"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="TailwindCSS-Light.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.921875"
+     inkscape:cx="82.983051"
+     inkscape:cy="128"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="760"
+     inkscape:window-y="214"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13" />
+  <path
+     fill="url(#paint0_linear_2_118)"
+     fill-rule="evenodd"
+     d="M83 110C88.9991 86.0009 104.001 74 128 74C164 74 168.5 101 186.5 105.5C198.501 108.501 209 104.001 218 92C212.001 115.999 196.999 128 173 128C137 128 132.5 101 114.5 96.5C102.499 93.4991 92 97.9991 83 110ZM38 164C43.9991 140.001 59.0009 128 83 128C119 128 123.5 155 141.5 159.5C153.501 162.501 164 158.001 173 146C167.001 169.999 151.999 182 128 182C92 182 87.5 155 69.5 150.5C57.4991 147.499 47 151.999 38 164Z"
+     clip-rule="evenodd"
+     id="path4" />
+  <defs
+     id="defs11">
+    <linearGradient
+       id="paint0_linear_2_118"
+       x1="86.5"
+       x2="163.5"
+       y1="74"
+       y2="185.5"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#32B1C1"
+         id="stop6" />
+      <stop
+         offset="1"
+         stop-color="#14C6B7"
+         id="stop8" />
+    </linearGradient>
+  </defs>
+</svg>
