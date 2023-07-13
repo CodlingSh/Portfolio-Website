@@ -154,49 +154,30 @@ function throttle(func, limit) {
 const scrollFunction = () => {
     let scanline = window.innerHeight * 0.75;
 
-    console.log(window.scrollY + scanline);
-   
-    // Check which section we are scrolled to
-    if (window.scrollY + scanline < 1000) {
-        homeLink.classList.add("active");
-        aboutLink.classList.remove("active");
-        skillsLink.classList.remove("active");
-        projectLink.classList.remove("active");
-        contactLink.classList.remove("active");
-
-        console.log("home")
-    } if (window.scrollY + scanline > aboutRect && window.scrollY + scanline < skillsRect) {
+    if (window.scrollY + scanline > aboutRect && window.scrollY + scanline < skillsRect) {
         homeLink.classList.remove("active");
         aboutLink.classList.add("active");
         skillsLink.classList.remove("active");
         projectLink.classList.remove("active");
         contactLink.classList.remove("active");
-
-        console.log("about")
     } if (window.scrollY + scanline > skillsRect && window.scrollY + scanline < projectsRect) {
         homeLink.classList.remove("active");
         aboutLink.classList.remove("active");
         skillsLink.classList.add("active");
         projectLink.classList.remove("active");
         contactLink.classList.remove("active");
-
-        console.log("skills")
     } if (window.scrollY + scanline > projectsRect && window.scrollY + scanline < contactRect) {
         homeLink.classList.remove("active");
         aboutLink.classList.remove("active");
         skillsLink.classList.remove("active");
         projectLink.classList.add("active");
         contactLink.classList.remove("active");
-
-        console.log("projects")
     } if (window.scrollY + scanline > contactRect) {
         homeLink.classList.remove("active");
         aboutLink.classList.remove("active");
         skillsLink.classList.remove("active");
         projectLink.classList.remove("active");
         contactLink.classList.add("active");
-
-        console.log("contact")
     } 
 }
 
@@ -211,12 +192,6 @@ const resetOnResize = () => {
     skillsRect = window.scrollY + document.getElementById("skills").getBoundingClientRect().top;
     projectsRect = window.scrollY + document.getElementById("projects").getBoundingClientRect().top;
     contactRect = window.scrollY + document.getElementById("contact").getBoundingClientRect().top;
-
-    console.log(homeRect);
-    console.log(aboutRect);
-    console.log(skillsRect);
-    console.log(projectsRect);
-    console.log(contactRect);
 
     scanline = window.innerHeight;
 
@@ -243,28 +218,24 @@ const validateForm = () => {
     if (name.length <= 0) {
         isValid = false;
         nameError.innerHTML = "Please insert your name";
-        console.log("It failed")
     }
 
     // Check if email matches the standard email address
     if (!emailRegex.test(email)) {
         isValid = false;
         emailError.innerHTML = "Email address is invalid";
-        console.log("It failed")
     }
 
     // Check that something was inserted into the email field
     if (email.length <= 0) {
         isValid = false;
         emailError.innerHTML = "Please insert an email address";
-        console.log("It failed")
     }
 
     // Check that the message textarea is valid
     if (message.length <= 0) {
         isValid = false;
         messageError.innerHTML = "Please insert a message";
-        console.log("It failed")
     }
 
     if (isValid) {
@@ -304,23 +275,13 @@ Object.values(projects).forEach(pBox => {
     pBox.querySelector(".projectBtn").addEventListener("click", projectOnClick);
 })
 
-// Listeners for nav buttons
-document.getElementById("homeLink").addEventListener("click", (event) => {
-    event.preventDefault();
-    scrollToSection("landing")
-});
-
-// TESTING
+// Event Listener for Nav buttons
 links = document.getElementsByClassName("link");
 
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener("click", (event) => {
         event.preventDefault();
-        if (i === 0) {
-            document.body.scrollIntoView({behavior: "smooth"});
-        } else {
-            scrollToSection(links[i].getAttribute("href").substring(1));
-        }
+        scrollToSection(links[i].getAttribute("href").substring(1));
     })
 }
 
@@ -330,13 +291,6 @@ document.getElementById("aboutLinkMobile").addEventListener("click", () => {mobi
 document.getElementById("skillsLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
 document.getElementById("projectLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
 document.getElementById("contactLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
-
-// window.addEventListener("load", (event) => {
-    // document.getElementById("outerHexagon").style.opacity = "1";
-    // document.getElementById("outerHexagon").style.transform = "translateY(0px)";
-    // document.getElementById("sideSect").style.opacity = "1";
-    // document.getElementById("sideSect").style.transform = "translateX(0px)";
-// })
 
 window.addEventListener("scroll", throttle(scrollFunction, 250));
 window.addEventListener("resize", throttle(resetOnResize, 100));
