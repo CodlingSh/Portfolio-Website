@@ -49,13 +49,13 @@ html {
         url(../assets/fonts/Ubuntu-Bold-compressed.ttf) format("truetype");
 }
 
-/*@font-face {
+@font-face {
     font-display: swap;
     font-family: ubuntu-medium;
     src: url(../assets/fonts/Ubuntu-Medium-compressed.woff2) format("woff2"),
         url(../assets/fonts/Ubuntu-Medium-compressed.woff) format("woff"),
         url(../assets/fonts/Ubuntu-Medium-compressed.ttf) format("truetype");
-}*/
+}
 
 /* ~~~ animations ~~~ */
 @keyframes fadeImageIn {
@@ -372,7 +372,7 @@ header #btnGroup > * {
 .sectTitle {
     position: relative;
     font-size: 4.8rem;
-    font-family: "ubuntu-bold";
+    font-family: ubuntu-bold;
     font-weight: bold;
     width: min-content;
     white-space: nowrap;
