@@ -155,30 +155,31 @@ const scrollFunction = () => {
     let scanline = window.innerHeight * 0.75;
 
     if (window.scrollY + scanline > aboutRect && window.scrollY + scanline < skillsRect) {
-        homeLink.classList.remove("active");
         aboutLink.classList.add("active");
         skillsLink.classList.remove("active");
         projectLink.classList.remove("active");
         contactLink.classList.remove("active");
-    } if (window.scrollY + scanline > skillsRect && window.scrollY + scanline < projectsRect) {
-        homeLink.classList.remove("active");
+    } else if (window.scrollY + scanline > skillsRect && window.scrollY + scanline < projectsRect) {
         aboutLink.classList.remove("active");
         skillsLink.classList.add("active");
         projectLink.classList.remove("active");
         contactLink.classList.remove("active");
-    } if (window.scrollY + scanline > projectsRect && window.scrollY + scanline < contactRect) {
-        homeLink.classList.remove("active");
+    } else if (window.scrollY + scanline > projectsRect && window.scrollY + scanline < contactRect) {
         aboutLink.classList.remove("active");
         skillsLink.classList.remove("active");
         projectLink.classList.add("active");
         contactLink.classList.remove("active");
-    } if (window.scrollY + scanline > contactRect) {
-        homeLink.classList.remove("active");
+    } else if (window.scrollY + scanline > contactRect) {
         aboutLink.classList.remove("active");
         skillsLink.classList.remove("active");
         projectLink.classList.remove("active");
         contactLink.classList.add("active");
-    } 
+    } else {
+        aboutLink.classList.remove("active");
+        skillsLink.classList.remove("active");
+        projectLink.classList.remove("active");
+        contactLink.classList.remove("active");  
+    }
 }
 
 const resetOnResize = () => {
@@ -286,7 +287,6 @@ for (let i = 0; i < links.length; i++) {
 }
 
 menuBtn.addEventListener("click", toggleMenu);
-document.getElementById("homeLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
 document.getElementById("aboutLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
 document.getElementById("skillsLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
 document.getElementById("projectLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
