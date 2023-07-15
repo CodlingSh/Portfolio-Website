@@ -13,6 +13,7 @@ html {
     /* scroll-behavior: smooth; */
     overflow-anchor: none;
     font-size: 62.5%;
+    font-family: ubuntu, sans-serif;
   }
 
 /* ~~~ Variables ~~~ */
@@ -36,6 +37,7 @@ html {
 @font-face {
     font-display: swap;
     font-family: ubuntu;
+    font-weight: 400;
     src: url(../assets/fonts/Ubuntu-Regular-compressed.woff2) format("woff2"),
         url(../assets/fonts/Ubuntu-Regular-compressed.woff) format("woff"),
         url(../assets/fonts/Ubuntu-Regular-compressed.ttf) format("truetype");
@@ -43,19 +45,22 @@ html {
 
 @font-face {
     font-display: swap;
-    font-family: ubuntu-bold;
+    font-family: ubuntu;
+    font-weight: 500;
+    src: url(../assets/fonts/Ubuntu-Medium-compressed.woff2) format("woff2"),
+        url(../assets/fonts/Ubuntu-Medium-compressed.woff) format("woff"),
+        url(../assets/fonts/Ubuntu-Medium-compressed.ttf) format("truetype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: ubuntu;
+    font-weight: 700;
     src: url(../assets/fonts/Ubuntu-Bold-compressed.woff2) format("woff2"),
         url(../assets/fonts/Ubuntu-Bold-compressed.woff) format("woff"),
         url(../assets/fonts/Ubuntu-Bold-compressed.ttf) format("truetype");
 }
 
-@font-face {
-    font-display: swap;
-    font-family: ubuntu-medium;
-    src: url(../assets/fonts/Ubuntu-Medium-compressed.woff2) format("woff2"),
-        url(../assets/fonts/Ubuntu-Medium-compressed.woff) format("woff"),
-        url(../assets/fonts/Ubuntu-Medium-compressed.ttf) format("truetype");
-}
 
 /* ~~~ animations ~~~ */
 @keyframes fadeImageIn {
@@ -67,6 +72,12 @@ html {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+@keyframes opacityLayerOnLoad {
+    0% {opacity: 1; z-index: 6507;}
+    99% {opacity: 0; z-index: 6507;}
+    100% {opacity: 0; z-index: 6507;}
 }
 
 body > * {
@@ -82,12 +93,14 @@ body > * {
 }
 
 body {
-    font-family: ubuntu, sans-serif;
+    /* font-family: ubuntu, sans-serif; */
+    font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
-    background-color: #f5f6fa;
+    background-color: #f5f6fa !important;
     overflow-x: hidden;
     width: 100vw;
+    z-index: 1;
 }
 
 nav {
@@ -102,6 +115,7 @@ nav {
     z-index: 6503;
 }
 nav h1 {
+    font-weight: 500;
     font-size: 2.8rem;
     padding-left: 5px;
 }
@@ -117,8 +131,7 @@ nav h1 {
 #navContainer li {
     display: inline;
     font-size: 2rem;
-    font-weight: bold;
-    
+    font-weight: 500;
 }
 #navContainer a {
     color: white;
@@ -162,7 +175,7 @@ nav h1 {
     background-color: #292f36;
     z-index: 6507;
     color: #fff;
-    font-family: ubuntu-medium;
+    font-weight: 500;
     font-size: 2rem;
 }
 #navMenu ul {
@@ -180,29 +193,21 @@ nav h1 {
     color: white;
 }
 
-/*nav {
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: #292f36;
-}*/
-
 #opacityLayer {
     position: fixed;
     height: 100vh;
     width: 100%;
     top: 0;
-    background-color: black;
     opacity: 0;
     z-index: -6507;
     transition: opacity 300ms ease, transform 400ms ease;
-    
 }
 #opacityLayer.turnOn {
     opacity: 30%;
 }
 #opacityLayer.nowExists {
     z-index: 6507;
+    background-color: black;
 }
 
 header {
@@ -250,7 +255,8 @@ header #btnGroup > * {
     padding: 0 16px;
     text-decoration: none;
     white-space: nowrap;
-    font-family: Ubuntu-medium;
+    font-family: ubuntu, sans-serif;
+    font-weight: 500;
     font-size: 2rem;
     border: none;
     will-change: box-shadow,transform;
@@ -293,7 +299,6 @@ header #btnGroup > * {
 
 #outerHexagon {
     position: relative;
-    /* transform: translateY(-100px); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -338,11 +343,10 @@ header #btnGroup > * {
 #introText h1 {
     font-size: 2.8rem;
     margin-bottom: 16px;
-    font-weight: bold;
-    font-family: ubuntu-bold;
+    font-weight: 700;
 }
 #introText p {
-    font-family: ubuntu-medium;
+    font-weight: 500;
     font-size: 2.4rem;
     margin-bottom: 15px;
 }
@@ -372,8 +376,7 @@ header #btnGroup > * {
 .sectTitle {
     position: relative;
     font-size: 4.8rem;
-    font-family: ubuntu-bold;
-    font-weight: bold;
+    font-family: ubuntu, sans-serif;
     width: min-content;
     white-space: nowrap;
     margin: 0 auto;
@@ -474,7 +477,7 @@ header #btnGroup > * {
     height: auto;
 }
 .skillBox p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .projects {
@@ -517,8 +520,8 @@ header #btnGroup > * {
     margin: 0 auto;
 }
 .projectBox li {
-    font-family: ubuntu-medium;
-    font-size: 1.4rem;
+    font-family: ubuntu, sans-serif;
+    font-size: 1.6rem;
     list-style: none;
     background-color:#1dd1a1;
     padding: 3px 7px;
@@ -608,7 +611,7 @@ form {
     border-radius: 15px;
 }
 form label {
-    font-weight: bold;
+    font-weight: 500;
     background-color: #f5f6fa;
     padding: 0 5px;
     width: min-content;
@@ -622,7 +625,7 @@ form input[type="text"], form textarea {
     border: 5px solid #292f36;
     padding: 12px;
     border-radius: 15px;
-    font-family: "Ubuntu";
+    font-family: Ubuntu, sans-serif;
     font-size: 1.6rem;
 }
 form input[type="text"]:focus, form textarea:focus {
