@@ -35,7 +35,7 @@ html {
 
 /* ~~~ Custom Font Set Up ~~~ */
 @font-face {
-    font-display: swap;
+    font-display: fallback;
     font-family: ubuntu;
     font-weight: 400;
     src: url(../assets/fonts/Ubuntu-Regular-compressed.woff2) format("woff2"),
@@ -44,7 +44,7 @@ html {
 } 
 
 @font-face {
-    font-display: swap;
+    font-display: fallback;
     font-family: ubuntu;
     font-weight: 500;
     src: url(../assets/fonts/Ubuntu-Medium-compressed.woff2) format("woff2"),
@@ -53,7 +53,7 @@ html {
 }
 
 @font-face {
-    font-display: swap;
+    font-display: fallback;
     font-family: ubuntu;
     font-weight: 700;
     src: url(../assets/fonts/Ubuntu-Bold-compressed.woff2) format("woff2"),
