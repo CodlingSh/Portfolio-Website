@@ -13,8 +13,8 @@ html {
     /* scroll-behavior: smooth; */
     overflow-anchor: none;
     font-size: 62.5%;
-    /* font-family: ubuntu, sans-serif; */
-    font-family: Tahoma, sans-serif
+    font-family: ubuntu, sans-serif;
+    /* font-family: Tahoma, sans-serif */
   }
 
 /* ~~~ Variables ~~~ */
