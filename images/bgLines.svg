@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="508mm" height="286mm" version="1.1" viewBox="0 0 508 286" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g fill="none" stroke="#1dd1a1">
+  <path d="m5.27 0v286" stroke-width=".564"/>
+  <path d="m503 6.56e-5v286" stroke-width=".564"/>
+  <g stroke-linejoin="round" stroke-width=".564">
+   <circle cx="35.8" cy="27.7" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="35.8" cy="16.4" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="35.8" cy="5.08" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="80.9" cy="5.08" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="104" cy="16.4" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="210" cy="27.7" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="221" cy="20.1" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="238" cy="37.5" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="19" cy="20.7" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="19" cy="126" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="27.4" cy="84.5" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="68.6" cy="73.1" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle cx="65.8" cy="48.2" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+  </g>
+  <g>
+   <g stroke-width=".564">
+    <path d="m114-6.1e-5v20.2h104"/>
+    <path d="m24.6 1.85e-5v48.2h38.3"/>
+    <path d="m70.7 71.1 33.9-33.6h130"/>
+    <path d="m30.3 84.5h40.3l33.9-33.6 299 6.6e-5 33.9 33.6h40.3"/>
+   </g>
+   <path d="m19 23.5v99.8" stroke-width=".564"/>
+   <path d="m38.6 27.7h168" stroke-width=".564"/>
+   <path d="m38.6 16.4h62" stroke-width=".564"/>
+   <path d="m38.6 5.08h39.5" stroke-width=".564"/>
+  </g>
+  <g stroke-linejoin="round" stroke-width=".564">
+   <circle transform="scale(-1,1)" cx="-472" cy="27.7" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-472" cy="16.4" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-472" cy="5.08" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-427" cy="5.08" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-404" cy="16.4" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-298" cy="27.7" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-287" cy="20.1" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-270" cy="37.5" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-489" cy="20.7" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-489" cy="126" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-481" cy="84.5" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-439" cy="73.1" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1,1)" cx="-442" cy="48.2" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+  </g>
+  <g>
+   <g stroke-width=".564">
+    <path d="m385 0v9.45l-261-6.6e-5v-9.45"/>
+    <path d="m394 4.6e-6v20.2h-104"/>
+    <path d="m483 8.41e-5v48.2h-38.3"/>
+    <path d="m437 71.1-33.9-33.6h-130"/>
+   </g>
+   <path d="m489 23.6v99.8" stroke-width=".564"/>
+   <path d="m469 27.7h-168" stroke-width=".564"/>
+   <path d="m469 16.4h-62" stroke-width=".564"/>
+   <path d="m469 5.08h-39.5" stroke-width=".564"/>
+  </g>
+  <g stroke-linejoin="round" stroke-width=".564">
+   <circle transform="scale(1,-1)" cx="35.8" cy="-258" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="35.8" cy="-269" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="35.8" cy="-281" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="80.9" cy="-281" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="104" cy="-269" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="210" cy="-258" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="221" cy="-266" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="238" cy="-248" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="19" cy="-265" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="19" cy="-160" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="27.4" cy="-201" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="68.6" cy="-213" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(1,-1)" cx="65.8" cy="-238" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+  </g>
+  <g>
+   <g stroke-width=".564">
+    <path d="m114 286v-20.2h104"/>
+    <path d="m24.6 286v-48.2h38.3"/>
+    <path d="m70.7 215 33.9 33.6h130"/>
+    <path d="m30.3 201h40.3l33.9 33.6 299-6e-5 33.9-33.6h40.3"/>
+   </g>
+   <path d="m19 262v-99.8" stroke-width=".564"/>
+   <path d="m38.6 258h168" stroke-width=".564"/>
+   <path d="m38.6 269h62" stroke-width=".564"/>
+   <path d="m38.6 281h39.5" stroke-width=".564"/>
+  </g>
+  <g stroke-linejoin="round" stroke-width=".564">
+   <circle transform="scale(-1)" cx="-472" cy="-258" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-472" cy="-269" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-472" cy="-281" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-427" cy="-281" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-404" cy="-269" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-298" cy="-258" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-287" cy="-266" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-270" cy="-248" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-489" cy="-265" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-489" cy="-160" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-481" cy="-201" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-439" cy="-213" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+   <circle transform="scale(-1)" cx="-442" cy="-238" r="1.28" stop-color="#000000" style="paint-order:markers stroke fill"/>
+  </g>
+  <g>
+   <g stroke-width=".564">
+    <path d="m385 286v-9.45l-261 6e-5v9.45"/>
+    <path d="m394 286v-20.2h-104"/>
+    <path d="m483 286v-48.2h-38.3"/>
+    <path d="m437 215-33.9 33.6h-130"/>
+   </g>
+   <path d="m489 262v-99.8" stroke-width=".564"/>
+   <path d="m469 258h-168" stroke-width=".564"/>
+   <path d="m469 269h-62" stroke-width=".564"/>
+   <path d="m469 281h-39.5" stroke-width=".564"/>
+  </g>
+ </g>
+</svg>

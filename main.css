@@ -39,27 +39,27 @@ html {
     font-display: fallback;
     font-family: ubuntu;
     font-weight: 400;
-    src: url(../assets/fonts/Ubuntu-Regular-compressed.woff2) format("woff2"),
-        url(../assets/fonts/Ubuntu-Regular-compressed.woff) format("woff"),
-        url(../assets/fonts/Ubuntu-Regular-compressed.ttf) format("truetype");
+    src: url(../fonts/Ubuntu-Regular-compressed.woff2) format("woff2"),
+        url(../fonts/Ubuntu-Regular-compressed.woff) format("woff"),
+        url(../fonts/Ubuntu-Regular-compressed.ttf) format("truetype");
 } 
 
 @font-face {
     font-display: fallback;
     font-family: ubuntu;
     font-weight: 500;
-    src: url(../assets/fonts/Ubuntu-Medium-compressed.woff2) format("woff2"),
-        url(../assets/fonts/Ubuntu-Medium-compressed.woff) format("woff"),
-        url(../assets/fonts/Ubuntu-Medium-compressed.ttf) format("truetype");
+    src: url(../fonts/Ubuntu-Medium-compressed.woff2) format("woff2"),
+        url(../fonts/Ubuntu-Medium-compressed.woff) format("woff"),
+        url(../fonts/Ubuntu-Medium-compressed.ttf) format("truetype");
 }
 
 @font-face {
     font-display: fallback;
     font-family: ubuntu;
     font-weight: 700;
-    src: url(../assets/fonts/Ubuntu-Bold-compressed.woff2) format("woff2"),
-        url(../assets/fonts/Ubuntu-Bold-compressed.woff) format("woff"),
-        url(../assets/fonts/Ubuntu-Bold-compressed.ttf) format("truetype");
+    src: url(../fonts/Ubuntu-Bold-compressed.woff2) format("woff2"),
+        url(../fonts/Ubuntu-Bold-compressed.woff) format("woff"),
+        url(../fonts/Ubuntu-Bold-compressed.ttf) format("truetype");
 }*/
 
 
@@ -212,7 +212,7 @@ nav h1 {
 
 header {
     position: relative;
-    background-image: url("../assets/images/bgLines.svg");
+    background-image: url("../images/bgLines.svg");
     background-color: #10ac84;
     background-size: cover;
     background-position: center;
@@ -317,7 +317,7 @@ header #btnGroup > * {
     max-width: calc(var(--hexMaxWidth) - 8px);
     max-height: calc(var(--hexMaxHeight) - 8px);
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    background-image: url("../assets/images/Headshot.avif");
+    background-image: url("../images/Headshot.avif");
     background-size: cover;
     background-position: center;
 }
@@ -574,7 +574,7 @@ header #btnGroup > * {
     content: ' ';
     transform: skewY(5deg);
     background-color: #10ac84;
-    background-image: url(../assets/images/bgLinesRotate.svg);
+    background-image: url(../images/bgLinesRotate.svg);
     background-position: center;
     width: 100%;
     top: 0; bottom: 0;
@@ -704,7 +704,7 @@ form #thankYouMessage.messageVisible {
 
 #contactBG {
     background-color: var(--darkGreen);
-    background-image: url(../assets/images/bgLines.svg);
+    background-image: url(../images/bgLines.svg);
     background-size: cover;
     background-position: center;
     position: absolute;
