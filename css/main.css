@@ -94,7 +94,6 @@ body > * {
 }
 
 body {
-    /* font-family: ubuntu, sans-serif; */
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
@@ -256,7 +255,6 @@ header #btnGroup > * {
     padding: 0 16px;
     text-decoration: none;
     white-space: nowrap;
-    font-family: ubuntu, sans-serif;
     font-weight: 500;
     font-size: 2rem;
     border: none;
@@ -520,7 +518,6 @@ header #btnGroup > * {
     margin: 0 auto;
 }
 .projectBox li {
-    font-family: ubuntu, sans-serif;
     font-size: 1.6rem;
     list-style: none;
     background-color:#1dd1a1;
@@ -625,7 +622,6 @@ form input[type="text"], form textarea {
     border: 5px solid #292f36;
     padding: 12px;
     border-radius: 15px;
-    font-family: Ubuntu, sans-serif;
     font-size: 1.6rem;
 }
 form input[type="text"]:focus, form textarea:focus {
