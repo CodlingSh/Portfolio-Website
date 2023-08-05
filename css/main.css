@@ -13,7 +13,7 @@ html {
     /* scroll-behavior: smooth; */
     overflow-anchor: none;
     font-size: 62.5%;
-    font-family: ubuntu, sans-serif;
+    font-family: "ubuntu", sans-serif;
     /* font-family: Tahoma, sans-serif */
   }
 
@@ -35,7 +35,7 @@ html {
 }
 
 /* ~~~ Custom Font Set Up ~~~ */
-@font-face {
+/*@font-face {
     font-display: fallback;
     font-family: ubuntu;
     font-weight: 400;
@@ -60,7 +60,7 @@ html {
     src: url(../assets/fonts/Ubuntu-Bold-compressed.woff2) format("woff2"),
         url(../assets/fonts/Ubuntu-Bold-compressed.woff) format("woff"),
         url(../assets/fonts/Ubuntu-Bold-compressed.ttf) format("truetype");
-}
+}*/
 
 
 /* ~~~ animations ~~~ */
