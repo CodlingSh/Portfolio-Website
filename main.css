@@ -13,7 +13,7 @@ html {
     /* scroll-behavior: smooth; */
     overflow-anchor: none;
     font-size: 62.5%;
-    font-family: "ubuntu", sans-serif;
+    
     /* font-family: Tahoma, sans-serif */
   }
 
@@ -35,32 +35,35 @@ html {
 }
 
 /* ~~~ Custom Font Set Up ~~~ */
-/*@font-face {
-    font-display: fallback;
-    font-family: ubuntu;
-    font-weight: 400;
-    src: url(../fonts/Ubuntu-Regular-compressed.woff2) format("woff2"),
-        url(../fonts/Ubuntu-Regular-compressed.woff) format("woff"),
-        url(../fonts/Ubuntu-Regular-compressed.ttf) format("truetype");
-} 
-
 @font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/Ubuntu-Bold.woff2') format('woff2'),
+        url('fonts/Ubuntu-Bold.woff') format('woff'),
+        url('fonts/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
     font-display: fallback;
-    font-family: ubuntu;
-    font-weight: 500;
-    src: url(../fonts/Ubuntu-Medium-compressed.woff2) format("woff2"),
-        url(../fonts/Ubuntu-Medium-compressed.woff) format("woff"),
-        url(../fonts/Ubuntu-Medium-compressed.ttf) format("truetype");
 }
 
 @font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/Ubuntu-Medium.woff2') format('woff2'),
+        url('fonts/Ubuntu-Medium.woff') format('woff'),
+        url('fonts/Ubuntu-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
     font-display: fallback;
-    font-family: ubuntu;
-    font-weight: 700;
-    src: url(../fonts/Ubuntu-Bold-compressed.woff2) format("woff2"),
-        url(../fonts/Ubuntu-Bold-compressed.woff) format("woff"),
-        url(../fonts/Ubuntu-Bold-compressed.ttf) format("truetype");
-}*/
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/Ubuntu-Regular.woff2') format('woff2'),
+        url('fonts/Ubuntu-Regular.woff') format('woff'),
+        url('fonts/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
 
 
 /* ~~~ animations ~~~ */
@@ -94,6 +97,7 @@ body > * {
 }
 
 body {
+    font-family: "ubuntu", sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
