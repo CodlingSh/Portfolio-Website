@@ -752,6 +752,7 @@ footer p {
     header {
         flex-direction: row-reverse;
         justify-content: center;
+        min-height: calc(100vh - 52px);
     }
     header #btnGroup {
         max-width: 600px;
