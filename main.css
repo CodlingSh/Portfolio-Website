@@ -10,11 +10,8 @@ October 16th, 2022
 }
 
 html {
-    /* scroll-behavior: smooth; */
     overflow-anchor: none;
     font-size: 62.5%;
-    
-    /* font-family: Tahoma, sans-serif */
   }
 
 /* ~~~ Variables ~~~ */
@@ -235,13 +232,10 @@ header #sideSect {
     width: 95%;
     max-width: 684px;
 }
-header #btnGroup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+header #btn_group {
+    list-style-type: none;
 }
-header #btnGroup > * {
+header #btn_group li{
     margin-bottom: 20px;
 }
 
@@ -255,7 +249,7 @@ header #btnGroup > * {
     color: black;
     box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#17a47f 0 -3px 0 inset;
     cursor: pointer;
-    height: 56px;
+    height: 60px;
     padding: 0 16px;
     text-decoration: none;
     white-space: nowrap;
@@ -278,16 +272,17 @@ header #btnGroup > * {
 }
 
 .heroBtn {
-    min-width: 170px;
+    /* min-width: 170px; */
+    width: 160px;
     background-color: #292f36;
     color: #fff;
     box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#1c2025 0 -3px 0 inset;
-    justify-content: flex-start;
+    justify-content: center;
 }
-.heroBtn p {
+/* .heroBtn p {
     width: 100%;
     text-align: center;
-}
+} */
 .heroBtn:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #1c2025 0 -3px 0 inset;
 } 
@@ -295,9 +290,8 @@ header #btnGroup > * {
     box-shadow: #1c2025 0 3px 7px inset;
 }
 .heroBtn img {
-    height: 45%;
-    width: auto;
-    padding-right: 15px;
+    height: 55%;
+    margin-right: 15px;
 }
 
 #outerHexagon {
@@ -339,7 +333,7 @@ header #btnGroup > * {
     /* background-color: #292f36; */
     color: #292f36;
     border-radius: 15px;
-    width: 95%;
+    width: 100%;
     /* padding: 10px; */
     /* margin-right: 20px; */
 }
@@ -754,19 +748,27 @@ footer p {
         justify-content: center;
         min-height: calc(100vh - 72px);
     }
-    header #btnGroup {
-        max-width: 600px;
-        width: 95%;
+    header #sideSect {
+        margin-right: 60px;
+        align-items: flex-start;
+    }
+    header #btn_group {
         justify-content: space-around;
         flex-direction: row;
+    }
+    header #btn_group li {
+        float: left;
+    }
+    header #btn_group li:first-child {
+        margin-right: 40px;
+    }
+    header #btn_group .heroBtn {
+        padding: 0 40px;
+        width: auto;
     }
 
     nav h1 {
         font-size: 48px;
-    }
-
-    #sideSect {
-        margin-right: 60px;
     }
 
     #introText h1 {
