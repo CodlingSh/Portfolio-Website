@@ -6,15 +6,9 @@ let aboutRect = window.scrollY + document.getElementById("about").getBoundingCli
 let skillsRect = window.scrollY + document.getElementById("skills").getBoundingClientRect().top;
 let projectsRect = window.scrollY + document.getElementById("projects").getBoundingClientRect().top;
 let contactRect = window.scrollY + document.getElementById("contact").getBoundingClientRect().top;
-
+let yearSpan = document.getElementById("currentYear");//Copyright year at bottom of page
 const projects = document.getElementsByClassName("projectBox");
 
-const getCurrentYear = () => {
-    let yearSpan = document.getElementById("currentYear");
-    let dateObj = new Date()
-
-    yearSpan.innerHTML = dateObj.getFullYear();
-}
 
 const delay = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -269,8 +263,6 @@ const scrollToSection = (sect) => {
     section.scrollIntoView({behavior: "smooth"});
 }
 
-getCurrentYear();
-
 // Event Listeners
 Object.values(projects).forEach(pBox => {
     pBox.querySelector(".projectBtn").addEventListener("click", projectOnClick);
@@ -285,6 +277,8 @@ for (let i = 0; i < links.length; i++) {
         scrollToSection(links[i].getAttribute("href").substring(1));
     })
 }
+
+yearSpan.innerHTML = new Date().getFullYear();
 
 menuBtn.addEventListener("click", toggleMenu);
 document.getElementById("aboutLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
