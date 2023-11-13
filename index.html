@@ -7,7 +7,7 @@
     <meta name="keywords" content="Sheldon, Codling, Sarnia, Canada, programmer, web, developer, javascript, python, java, bash, portfolio">
     <meta name="author" content="Sheldon Codling">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.sheldonc.ca;">
+    <!--<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.sheldonc.ca;">-->
     <title>Sheldon Codling</title>
     <!-- CODE FOR FAVICONS -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -391,7 +391,7 @@
                     <!-- Dummy iFrame to stop redirecting to a new page -->
                     <iframe name="dummyFrame" id="dummyFrame" style="display: none;"></iframe>
 
-                    <form name='contactForm' target="dummyFrame" method='POST' onsubmit="return validateForm()" action="/"><input type='hidden' name='form-name' value='contact'>
+                    <form name='contactForm' target="dummyFrame" method='POST' onsubmit="validateForm()" action="/"><input type='hidden' name='form-name' value='contact'>
                         <!-- Name -->
                         <div class="inputContainer">
                             <label for="name">Name</label>
