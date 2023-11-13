@@ -72,16 +72,14 @@ const projectOnClick = async (e) => {
         position: fixed;
         transform: translateX(calc(2.5vw - ${left}px)) translateY(calc(${mobileHeight * 0.035}px - ${top}px));
         height: ${mobileHeight * 0.93}px; 
-        width: 95vw; 
-        //z-index: 9001;
+        width: 95vw;
     }
     
     @media only screen and (min-width: 1100px) {
         .activeStyle {
             transform: translateX(calc(31vw - ${left}px)) translateY(calc(3.5vh - ${top}px)); 
             height: 93%; 
-            width: 38%; 
-            //z-index: 9001;
+            width: 38%;
         }
     }
     `
