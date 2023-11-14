@@ -9,7 +9,6 @@ let contactRect = window.scrollY + document.getElementById("contact").getBoundin
 let yearSpan = document.getElementById("currentYear");//Copyright year at bottom of page
 const projects = document.getElementsByClassName("projectBox");
 
-
 const delay = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
