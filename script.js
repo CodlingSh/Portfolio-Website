@@ -25,7 +25,6 @@ const toggleOpacityLayer = () => {
             opacityLayer.classList.remove("nowExists");
         }, {once: true});
     }
-    console.log("toggled");
 }
 
 const toggleMenu = () => {
@@ -107,7 +106,6 @@ const projectOnClick = async (e) => {
         cloneBox.classList.remove("initStyle");
         cloneBox.remove();
         originalBox.style.opacity = 1;
-        console.log("OPACITYLAYER CLICKED! " + Math.random());
     }
     
     delay(301).then(() => closeBtn.addEventListener("click", async () => {
@@ -175,8 +173,6 @@ const scrollFunction = () => {
 
 const resetOnResize = () => {
     console.clear();
-
-    console.log("resize detected!");
 
     // DOM element locations relative to the page
     homeRect = window.scrollY + document.getElementById("landing").getBoundingClientRect().top;
