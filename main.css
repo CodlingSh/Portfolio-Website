@@ -459,8 +459,9 @@ header #btn_group li{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 15px;
-    box-shadow: 0px 0px 3px #10ac84;
+    border-radius: 10px;
+    border: 1px solid #10ac84;
+    box-shadow: 0px 0px 5px #8a9096;
     background: #ffffff;
 }
 
