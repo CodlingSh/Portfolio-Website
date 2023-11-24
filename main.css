@@ -250,6 +250,7 @@ header #btn_group li{
     box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#17a47f 0 -3px 0 inset;
     cursor: pointer;
     height: 60px;
+    width: min-content;
     padding: 0 16px;
     text-decoration: none;
     white-space: nowrap;
@@ -419,7 +420,7 @@ header #btn_group li{
 }
 
 #projectSect {
-    max-width: 1110px;
+    max-width: min-content;
 }
 
 #contact {
@@ -477,7 +478,73 @@ header #btn_group li{
     font-size: 1.6rem;
 }
 
-.projects {
+#projects_grid_container {
+    display: grid;
+    grid-template-columns: repeat(1, 380px);
+    grid-auto-rows: 1fr;
+    /* grid-template-rows: repeat(6, 450px); */
+    row-gap: 40px;
+    column-gap: 40px;
+}
+
+.project {
+    background-color: #ffffff;
+    transition: 300ms ease, opacity 0ms;
+}
+.project img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 9px 9px 0 0;
+    object-fit: cover;
+}
+.project_text {
+    padding: 0 5%;
+}
+.project_text > * {
+    margin: 5px;
+}
+
+.projectBtn {
+    margin: 10px auto;
+}
+
+.project_skills {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.project_skills li {
+    display: inline-block;
+    margin-left: 3px; margin-right: 3px;
+    background-color:#10ac84;
+    padding: 0 5px;
+}
+.project_skills .html {
+    background-color: #ff9f43;
+}
+.project_skills .css {
+    background-color: #54a0ff;
+}
+.project_skills .js {
+    background-color: #feca57;
+}
+
+.hiddenText {
+    display: none;
+}
+
+/* ##########################
+   # Class for active modal #
+   ########################## */
+.project.activeStyle {
+    top: 102px;
+    left: calc((100vw - 55vw) / 2);
+    width: 55vw;
+    height: calc(100vh - 72px - 60px);
+}
+
+/* .projects {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -485,7 +552,6 @@ header #btn_group li{
 
 .projectBox {
     width: 380px;
-    /* height: 380px; */
     margin: 20px;
     transition: 300ms, opacity 0ms;
     overflow-y: auto;
@@ -565,7 +631,7 @@ header #btn_group li{
 }
 .activeStyle .visibleText {
     display: none;
-}
+} */
 
 .rotateSect {
     position: absolute;
@@ -723,6 +789,11 @@ footer {
 footer p {
     text-align: center;
 }
+@media only screen and (min-width: 880px) {
+    #projects_grid_container {
+        grid-template-columns: repeat(2, 380px);
+    }
+}
 
 @media only screen and (min-width: 1280px) {
 
@@ -782,6 +853,11 @@ footer p {
     .skillGroup {
         grid-template-columns: repeat(auto-fit, minmax(95px, 115px));
         grid-gap: 15px;
+    }
+
+    #projects_grid_container {
+        grid-template-columns: repeat(3, 380px);
+        /* grid-template-rows: repeat(2, min-content); */
     }
 
     #formContainer {
