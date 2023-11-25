@@ -8,12 +8,14 @@ const projectClick = async (e) => {
     // Prevent the page from scrolling
     document.body.classList.add("bodyLock");
     // Set initial style
-    cloneBox.style.backgroundColor = "red";
     cloneBox.style.position = "fixed";
     cloneBox.style.top = `${top}px`;
     cloneBox.style.left = `${left}px`; 
     cloneBox.style.width = `${width}px`;
     cloneBox.style.height = `${height}px`;
+    cloneBox.style.zIndex = 9001;
+    // Make original box invisible
+    originalBox.style.opacity = 0;
 
     //Append modal to project_grid
     originalBox.parentElement.appendChild(cloneBox);
@@ -27,7 +29,7 @@ const projectClick = async (e) => {
         cloneBox.style.removeProperty("width");
         cloneBox.style.removeProperty("height");
         cloneBox.classList.add("activeStyle");
-    }, 0);
+    }, 1);
 }
 
 projectBtns = document.getElementsByClassName("projectBtn")

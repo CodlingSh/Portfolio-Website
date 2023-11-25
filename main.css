@@ -16,6 +16,7 @@ html {
 
 /* ~~~ Variables ~~~ */
 :root {
+    --navHeight: 52px;
     --hexSize: 65vw;
     --hexMaxWidth: 475px;
     --hexMaxHeight: calc(var(--hexMaxWidth) * 1.1526644736842);
@@ -107,6 +108,7 @@ body {
 nav {
     position: sticky;
     width: 100vw;
+    height: var(--navHeight);
     top: 0px;
     display: flex;
     justify-content: space-between;
@@ -538,10 +540,10 @@ header #btn_group li{
    # Class for active modal #
    ########################## */
 .project.activeStyle {
-    top: 102px;
-    left: calc((100vw - 55vw) / 2);
-    width: 55vw;
-    height: calc(100vh - 72px - 60px);
+    top: calc(var(--navHeight) + 20px);
+    left: max(2.5vw, calc((100vw - 730px) / 2));
+    width: min(95%, 730px);
+    height: calc(100dvh - var(--navHeight) - 40px);
 }
 
 /* .projects {
@@ -797,9 +799,9 @@ footer p {
 
 @media only screen and (min-width: 1280px) {
 
-    /* :root {
-        --hexSize: 80vw;
-    } */
+    :root {
+        --navHeight: 72px;
+    }
 
     .mobile {
         display: none;
