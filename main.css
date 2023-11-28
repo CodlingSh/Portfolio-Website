@@ -16,6 +16,7 @@ html {
 
 /* ~~~ Variables ~~~ */
 :root {
+    --navHeight: 52px;
     --hexSize: 65vw;
     --hexMaxWidth: 475px;
     --hexMaxHeight: calc(var(--hexMaxWidth) * 1.1526644736842);
@@ -107,18 +108,23 @@ body {
 nav {
     position: sticky;
     width: 100vw;
+    height: var(--navHeight);
     top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #292f36;
     color: white;
-    z-index: 6503;
+    z-index: 9010;
 }
 nav h1 {
     font-weight: 500;
     font-size: 2.8rem;
     padding-left: 5px;
+}
+nav .dimmingOverlay {
+    z-index: 9011;
+    position: absolute;
 }
 
 #navContainer {
@@ -194,21 +200,16 @@ nav h1 {
     color: white;
 }
 
-#opacityLayer {
+.dimmingOverlay {
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     top: 0;
     opacity: 0;
-    z-index: -6507;
-    transition: opacity 300ms ease, transform 400ms ease;
-}
-#opacityLayer.turnOn {
-    opacity: 30%;
-}
-#opacityLayer.nowExists {
-    z-index: 6507;
+    z-index: 9000;
     background-color: black;
+    transition: opacity 300ms ease, transform 400ms ease;
+    pointer-events: none;
 }
 
 header {
@@ -237,6 +238,10 @@ header #btn_group {
 }
 header #btn_group li{
     margin-bottom: 20px;
+}
+
+p:not(:last-child) {
+    margin-bottom: 1.6rem;
 }
 
 .btn {
@@ -411,9 +416,6 @@ header #btn_group li{
 #aboutSect {
     max-width: 660px;
 }
-#aboutSect p:not(:last-child) {
-    margin-bottom: 1.6rem;
-}
 
 #skillSect {
     max-width: 855px;
@@ -482,14 +484,15 @@ header #btn_group li{
     display: grid;
     grid-template-columns: repeat(1, 380px);
     grid-auto-rows: 1fr;
-    /* grid-template-rows: repeat(6, 450px); */
     row-gap: 40px;
     column-gap: 40px;
 }
 
 .project {
+    position: relative;
     background-color: #ffffff;
     transition: 300ms ease, opacity 0ms;
+    
 }
 .project img {
     display: block;
@@ -504,9 +507,43 @@ header #btn_group li{
 .project_text > * {
     margin: 5px;
 }
+.project .helpful_links {
+    display: flex;
+    justify-content: center;
+}
+.project .headline {
+    margin-bottom: 0;
+}
+.project .helpful_links > *:not(:last-child) {
+    margin-right: 10px;
+}
+.project .projectBtn {
+    align-self: flex-end;
+    margin: 10px 0;
+}
+.project .close_btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 48px !important; width: 48px;
+    /* border: none; */
+    border-radius: 50%;
+    /* background-color: #1dd1a1; */
+    /* font-size: 24px; */
+
+}
+.tools_title {
+    text-align: center;
+}
+.info_btn_container {
+    display: flex;
+    height: 100%;
+}
+
 
 .projectBtn {
-    margin: 10px auto;
+    bottom: 10px;
+    height: 60px;
 }
 
 .project_skills {
@@ -531,17 +568,29 @@ header #btn_group li{
 }
 
 .hiddenText {
-    display: none;
+    /* display: none !important; */
+    height: 0px;
+    visibility: hidden;
+}
+
+.modal_active .visibleText {
+    height: 0;
+    visibility: hidden;
+}
+
+.modal_active .hiddenText {
+    height: auto;
+    visibility: visible;
 }
 
 /* ##########################
    # Class for active modal #
    ########################## */
 .project.activeStyle {
-    top: 102px;
-    left: calc((100vw - 55vw) / 2);
-    width: 55vw;
-    height: calc(100vh - 72px - 60px);
+    top: calc(var(--navHeight) + 20px) !important;
+    left: max(2.5vw, calc((100vw - 730px) / 2)) !important;
+    width: min(95%, 730px) !important;
+    height: calc(100dvh - var(--navHeight) - 40px) !important;
 }
 
 /* .projects {
@@ -797,9 +846,9 @@ footer p {
 
 @media only screen and (min-width: 1280px) {
 
-    /* :root {
-        --hexSize: 80vw;
-    } */
+    :root {
+        --navHeight: 72px;
+    }
 
     .mobile {
         display: none;
