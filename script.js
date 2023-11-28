@@ -1,122 +1,112 @@
 const menuBtn = document.getElementById("navBtn");
-const opacityLayer = document.getElementById("opacityLayer")
+const dimOverlays = Array.from(document.getElementsByClassName("dimmingOverlay"));
 // DOM element locations relative to the page
-let homeRect = window.scrollY + document.getElementById("landing").getBoundingClientRect().top;
-let aboutRect = window.scrollY + document.getElementById("about").getBoundingClientRect().top;
-let skillsRect = window.scrollY + document.getElementById("skills").getBoundingClientRect().top;
-let projectsRect = window.scrollY + document.getElementById("projects").getBoundingClientRect().top;
-let contactRect = window.scrollY + document.getElementById("contact").getBoundingClientRect().top;
-let yearSpan = document.getElementById("currentYear");//Copyright year at bottom of page
-const projects = document.getElementsByClassName("projectBox");
+const homeRect = window.scrollY + document.getElementById("landing").getBoundingClientRect().top;
+const aboutRect = window.scrollY + document.getElementById("about").getBoundingClientRect().top;
+const skillsRect = window.scrollY + document.getElementById("skills").getBoundingClientRect().top;
+const projectsRect = window.scrollY + document.getElementById("projects").getBoundingClientRect().top;
+const contactRect = window.scrollY + document.getElementById("contact").getBoundingClientRect().top;
+const yearSpan = document.getElementById("currentYear");//Copyright year at bottom of page
 
-const delay = (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms));
+const toggleDim = () => {
+    const dimOverlays = Array.from(document.getElementsByClassName("dimmingOverlay"));
+    const currentOpacity = window.getComputedStyle(document.getElementsByClassName("dimmingOverlay")[0]).opacity;
+
+    if (currentOpacity == "0") { // Turning the dim on
+        dimOverlays.forEach(dimOverlay => {
+            dimOverlay.style.pointerEvents = "auto";
+            dimOverlay.style.opacity = "0.3";
+        })
+    } else { // Turning the dim off
+        dimOverlays.forEach(dimOverlay => {
+            dimOverlay.style.removeProperty("pointer-events");
+            dimOverlay.style.opacity = "0";
+        })
+    }
 }
 
-const toggleOpacityLayer = () => {
-    if (!opacityLayer.classList.contains("turnOn")) {
-        opacityLayer.classList.add("nowExists");
-        opacityLayer.classList.add("turnOn");
-    } 
-    else {
-        opacityLayer.classList.remove("turnOn");
+const openModal = (e) => {
+    const originalBox = e.currentTarget.parentElement.parentElement;
+    const cloneBox = originalBox.cloneNode(true);
+    let {top, left, width, height} = originalBox.getBoundingClientRect();
 
-        opacityLayer.addEventListener("transitionend", () => {
-            opacityLayer.classList.remove("nowExists");
-        }, {once: true});
+    const closeModal = () => {
+        // Remove event listeners
+        cloneBox.getElementsByClassName("close_btn")[0].addEventListener("click", closeModal);
+        dimOverlays.forEach(dimOverlay => {
+            dimOverlay.removeEventListener("click", closeModal);
+        })
+
+        toggleDim();
+        cloneBox.classList.remove("activeStyle");
+        cloneBox.classList.remove("modal_active");
+        cloneBox.style.removeProperty("zIndex");
+        cloneBox.style.removeProperty("transition");
+        cloneBox.style.removeProperty("border-radius");
+        cloneBox.style.removeProperty("overflow-y");
+        
+        setTimeout(() => {
+            originalBox.style.removeProperty("opacity");
+            document.body.classList.remove("bodyLock");
+            cloneBox.remove();
+        }, 300)
     }
+
+    e.preventDefault();
+    toggleDim();
+    
+    // Prevent the page from scrolling
+    document.body.classList.add("bodyLock");
+    // Set initial style
+    cloneBox.style.position = "fixed";
+    cloneBox.style.top = `${top}px`;
+    cloneBox.style.left = `${left}px`; 
+    cloneBox.style.width = `${width}px`;
+    cloneBox.style.height = `${height}px`;
+    cloneBox.style.zIndex = "9001";
+    // Make original box invisible
+    originalBox.style.opacity = 0;
+
+    //Append modal to project_grid
+    originalBox.parentElement.appendChild(cloneBox);
+
+    // Set active style
+    setTimeout(() => {
+        cloneBox.classList.add("activeStyle");
+        cloneBox.style.borderRadius = "0px";
+        cloneBox.style.overflowY = "auto";
+        //Hide certain original elements and reveal hidden elements by adding the "modal_active" class
+        cloneBox.classList.add("modal_active");
+    }, 1);
+    
+    setTimeout(() => {
+        // cloneBox.style.zIndex = "9901";
+        cloneBox.style.transition = "none";
+    }, 300)
+
+    // Set click events to close the modal
+    cloneBox.getElementsByClassName("close_btn")[0].addEventListener("click", closeModal);
+    dimOverlays.forEach(dimOverlay => {
+        dimOverlay.addEventListener("click", closeModal);
+    })
 }
 
 const toggleMenu = () => {
     if (!document.body.classList.contains("menuVisible")) { // If menu is closed when clicked
         document.body.classList.add("menuVisible");
-        // Add event listen to opacity layer to close the menu.
-        opacityLayer.addEventListener("click", toggleMenu, {once: true});
-
+        dimOverlays.forEach(dimOverlay => {
+            dimOverlay.addEventListener("click", toggleMenu);
+        })
     }
     else if (document.body.classList.contains("menuVisible")) { // If menu is open when clicked
         document.body.classList.remove("menuVisible");
-        opacityLayer.removeEventListener("click", toggleMenu);
-    }
-    toggleOpacityLayer();   
-}
-
-const mobileLinkClick = (section) => {
-    window.location.assign = "#" + section;
-    //opacityLayer.removeEventListener("click", closeMenu);
-    toggleMenu();
-}
-
-const projectOnClick = async (e) => {
-    const originalBox = e.currentTarget.parentElement;
-    const cloneBox = originalBox.cloneNode(true);
-    const dynamicStyle = document.getElementById("jsStyle");
-    const mobileHeight = window.innerHeight;
-    
-    let {top, left, width, height} = originalBox.getBoundingClientRect();
-
-    dynamicStyle.innerHTML = `.initStyle {
-        position: fixed; 
-        margin: 0; 
-        top: ${top}px; 
-        left: ${left}px;
-        /*transform: translateX(${left}px) translateY(${top}px);*/
-        width: ${width}px; 
-        height: ${height}px;
-        z-index: 6508;
-    }
-
-    .activeStyle {
-        position: fixed;
-        transform: translateX(calc(2.5vw - ${left}px)) translateY(calc(${mobileHeight * 0.035}px - ${top}px));
-        height: ${mobileHeight * 0.93}px; 
-        width: 95vw;
-    }
-    
-    @media only screen and (min-width: 1100px) {
-        .activeStyle {
-            transform: translateX(calc(31vw - ${left}px)) translateY(calc(3.5vh - ${top}px)); 
-            height: 93%; 
-            width: 38%;
-        }
-    }
-    `
-
-    cloneBox.classList.add("initStyle");
-    originalBox.style.opacity = 0;
-    document.body.classList.add("bodyLock");
-    originalBox.parentElement.appendChild(cloneBox);
-    setTimeout(() => {cloneBox.classList.toggle("activeStyle")}, 1);
-    toggleOpacityLayer();
-
-    let closeBtn = cloneBox.getElementsByClassName("closeBtn")[0];
-
-    const closeProject = async (element) => {
-        return new Promise((res) => {
-            element.classList.remove("activeStyle");
-            toggleOpacityLayer();
-            opacityLayer.removeEventListener("click", opacityLayerClick);
-            setTimeout(res, 300);
+        console.log("ligma")
+        dimOverlays.forEach(dimOverlay => {
+            dimOverlay.removeEventListener("click", toggleMenu);
         })
     }
-
-    const opacityLayerClick = async () => {
-        await closeProject(cloneBox);
-        document.body.classList.remove("bodyLock");
-        cloneBox.classList.remove("initStyle");
-        cloneBox.remove();
-        originalBox.style.opacity = 1;
-    }
     
-    delay(301).then(() => closeBtn.addEventListener("click", async () => {
-        await closeProject(cloneBox);
-        document.body.classList.remove("bodyLock");
-        cloneBox.classList.remove("initStyle");
-        cloneBox.remove();
-        originalBox.style.opacity = 1;
-    }, {once: true}));
-
-    delay(301).then(() => opacityLayer.addEventListener("click", opacityLayerClick, {once: true}));
+    toggleDim();
 }
 
 function throttle(func, limit) {
@@ -171,22 +161,6 @@ const scrollFunction = () => {
     }
 }
 
-const resetOnResize = () => {
-    console.clear();
-
-    // DOM element locations relative to the page
-    homeRect = window.scrollY + document.getElementById("landing").getBoundingClientRect().top;
-    aboutRect = window.scrollY + document.getElementById("about").getBoundingClientRect().top;
-    skillsRect = window.scrollY + document.getElementById("skills").getBoundingClientRect().top;
-    projectsRect = window.scrollY + document.getElementById("projects").getBoundingClientRect().top;
-    contactRect = window.scrollY + document.getElementById("contact").getBoundingClientRect().top;
-
-    scanline = window.innerHeight;
-
-    // toggleExpansion(projectClone, {top: null, left: null, width: "40vw", height: "90vh"});
-    scrollFunction();
-}
-
 const validateForm = () => {
     let name = document.forms["contactForm"]["name"].value;
     let email = document.forms["contactForm"]["email"].value;
@@ -198,7 +172,6 @@ const validateForm = () => {
     let emailError = document.getElementById("emailError");
     let messageError = document.getElementById("messageError");
     let errorMessages = document.getElementsByClassName("errorMessage");
-
 
     let isValid = true;
 
@@ -256,11 +229,6 @@ const scrollToSection = (sect) => {
     section.scrollIntoView({behavior: "smooth"});
 }
 
-// Event Listeners
-Object.values(projects).forEach(pBox => {
-    pBox.querySelector(".projectBtn").addEventListener("click", projectOnClick);
-})
-
 // Event Listener for Nav buttons
 links = document.getElementsByClassName("link");
 
@@ -273,6 +241,13 @@ for (let i = 0; i < links.length; i++) {
 
 yearSpan.innerHTML = new Date().getFullYear();
 
+projectBtns = document.getElementsByClassName("projectBtn")
+projectBtnsArray = Array.from(projectBtns)
+
+projectBtnsArray.forEach(element => {
+    element.addEventListener("click", openModal);
+});
+
 menuBtn.addEventListener("click", toggleMenu);
 document.getElementById("aboutLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
 document.getElementById("skillsLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
@@ -280,4 +255,3 @@ document.getElementById("projectLinkMobile").addEventListener("click", () => {mo
 document.getElementById("contactLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
 
 window.addEventListener("scroll", throttle(scrollFunction, 250));
-window.addEventListener("resize", throttle(resetOnResize, 100));
