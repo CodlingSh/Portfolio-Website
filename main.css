@@ -561,10 +561,16 @@ p:not(:last-child) {
     background-color: #ff9f43;
 }
 .project_skills .css {
-    background-color: #54a0ff;
+    background-color: #48dbfb;
 }
 .project_skills .js {
     background-color: #feca57;
+}
+.project_skills .python {
+    background-color: #65b1ff
+}
+.project_skills .pi {
+    background-color: #ff6b6b;
 }
 
 .hiddenText {
