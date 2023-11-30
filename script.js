@@ -1,3 +1,4 @@
+"use strict";
 const menuBtn = document.getElementById("navBtn");
 const dimOverlays = Array.from(document.getElementsByClassName("dimmingOverlay"));
 // DOM element locations relative to the page
@@ -224,34 +225,34 @@ const validateForm = () => {
     }
 }
 
-const scrollToSection = (sect) => {
-    let section = document.getElementById(sect);
+const linkClick = (e) => {
+    e.preventDefault();
+    section = document.getElementById(e.target.href.split("#")[1]);
     section.scrollIntoView({behavior: "smooth"});
+    console.log(e.target.className == "linkMobile");
+    if (e.target.className == "linkMobile") {
+        console.log("menu");
+        toggleMenu();
+    }
 }
 
-// Event Listener for Nav buttons
-links = document.getElementsByClassName("link");
-
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener("click", (event) => {
-        event.preventDefault();
-        scrollToSection(links[i].getAttribute("href").substring(1));
-    })
-}
-
+// Year for the footer
 yearSpan.innerHTML = new Date().getFullYear();
 
-projectBtns = document.getElementsByClassName("projectBtn")
-projectBtnsArray = Array.from(projectBtns)
+// #####################
+// ## EVENT LISTENERS ##
+// #####################
 
-projectBtnsArray.forEach(element => {
-    element.addEventListener("click", openModal);
-});
-
+// Add click event to the "More Info" buttons in the projectss
+Array.from(document.getElementsByClassName("projectBtn")).forEach(element => {
+    element.addEventListener("click", openModal)
+})
+// Add click event for the menu button
 menuBtn.addEventListener("click", toggleMenu);
-document.getElementById("aboutLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
-document.getElementById("skillsLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
-document.getElementById("projectLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
-document.getElementById("contactLinkMobile").addEventListener("click", () => {mobileLinkClick("");});
-
+// Array to add click events to all the navigation links
+Array.from(document.getElementsByClassName("linkMobile")).concat(Array.from(document.getElementsByClassName("link"))).forEach(element => {
+    console.log("click event added");
+    element.addEventListener("click", linkClick);
+});
+// Listen for scrolling to change the color of navigation links
 window.addEventListener("scroll", throttle(scrollFunction, 250));
