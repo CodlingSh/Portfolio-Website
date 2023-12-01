@@ -1,12 +1,6 @@
 "use strict";
 const menuBtn = document.getElementById("navBtn");
 const dimOverlays = Array.from(document.getElementsByClassName("dimmingOverlay"));
-// DOM element locations relative to the page
-const homeRect = window.scrollY + document.getElementById("landing").getBoundingClientRect().top;
-const aboutRect = window.scrollY + document.getElementById("about").getBoundingClientRect().top;
-const skillsRect = window.scrollY + document.getElementById("skills").getBoundingClientRect().top;
-const projectsRect = window.scrollY + document.getElementById("projects").getBoundingClientRect().top;
-const contactRect = window.scrollY + document.getElementById("contact").getBoundingClientRect().top;
 const yearSpan = document.getElementById("currentYear");//Copyright year at bottom of page
 
 const toggleDim = () => {
@@ -131,7 +125,13 @@ function throttle(func, limit) {
 }
 
 const scrollFunction = () => {
-    let scanline = window.innerHeight * 0.75;
+    const scanline = window.innerHeight * 0.75;
+    // DOM element locations relative to the page
+    const homeRect = window.scrollY + document.getElementById("landing").getBoundingClientRect().top;
+    const aboutRect = window.scrollY + document.getElementById("about").getBoundingClientRect().top;
+    const skillsRect = window.scrollY + document.getElementById("skills").getBoundingClientRect().top;
+    const projectsRect = window.scrollY + document.getElementById("projects").getBoundingClientRect().top;
+    const contactRect = window.scrollY + document.getElementById("contact").getBoundingClientRect().top;
 
     if (window.scrollY + scanline > aboutRect && window.scrollY + scanline < skillsRect) {
         aboutLink.classList.add("active");
