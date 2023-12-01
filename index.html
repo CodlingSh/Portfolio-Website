@@ -377,7 +377,7 @@
                     <!-- Dummy iFrame to stop redirecting to a new page -->
                     <iframe name="dummyFrame" id="dummyFrame" style="display: none;"></iframe>
 
-                    <form name='contactForm' target="dummyFrame" method='POST' onsubmit="validateForm()" action="/"><input type='hidden' name='form-name' value='contact'>
+                    <form name='contactForm' target="dummyFrame" method='POST' onsubmit="validateForm()" action="/" data-netlify="true"><input type='hidden' name='form-name' value='contact'>
                         <!-- Name -->
                         <div class="inputContainer">
                             <label for="name">Name</label>
