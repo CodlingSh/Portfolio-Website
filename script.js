@@ -101,7 +101,6 @@ const toggleMenu = () => {
     }
     else if (document.body.classList.contains("menuVisible")) { // If menu is open when clicked
         document.body.classList.remove("menuVisible");
-        console.log("ligma")
         dimOverlays.forEach(dimOverlay => {
             dimOverlay.removeEventListener("click", toggleMenu);
         })
@@ -227,11 +226,9 @@ const validateForm = () => {
 
 const linkClick = (e) => {
     e.preventDefault();
-    section = document.getElementById(e.target.href.split("#")[1]);
+    const section = document.getElementById(e.target.href.split("#")[1]);
     section.scrollIntoView({behavior: "smooth"});
-    console.log(e.target.className == "linkMobile");
     if (e.target.className == "linkMobile") {
-        console.log("menu");
         toggleMenu();
     }
 }
