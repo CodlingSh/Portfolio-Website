@@ -68,7 +68,6 @@ const openModal = (e) => {
     // Set active style
     setTimeout(() => {
         cloneBox.classList.add("activeStyle");
-        cloneBox.style.borderRadius = "0px";
         cloneBox.style.overflowY = "auto";
         //Hide certain original elements and reveal hidden elements by adding the "modal_active" class
         cloneBox.classList.add("modal_active");
