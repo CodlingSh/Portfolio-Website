@@ -2,7 +2,6 @@
 By Sheldon Codling
 October 16th, 2022
 */
-
 * {
     padding: 0;
     margin: 0;
@@ -33,7 +32,7 @@ html {
 }
 
 /* ~~~ Custom Font Set Up ~~~ */
-@font-face {
+/*@font-face {
     font-family: 'Ubuntu';
     src: url('fonts/Ubuntu-Bold.woff2') format('woff2'),
         url('fonts/Ubuntu-Bold.woff') format('woff'),
@@ -41,7 +40,7 @@ html {
     font-weight: bold;
     font-style: normal;
     font-display: fallback;
-}
+}*/
 
 @font-face {
     font-family: 'Ubuntu';
@@ -478,6 +477,11 @@ p:not(:last-child) {
 }
 .skillBox p {
     font-size: 1.6rem;
+}
+#testIcon {
+    width: 256px;
+    height: 256px;
+    background: url(icon_grid.svg) 0 0;
 }
 
 #projects_grid_container {
