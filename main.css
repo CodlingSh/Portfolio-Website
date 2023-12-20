@@ -603,6 +603,95 @@ p:not(:last-child) {
     height: calc(100dvh - var(--navHeight) - 40px) !important;
 }
 
+/* .projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projectBox {
+    width: 380px;
+    margin: 20px;
+    transition: 300ms, opacity 0ms;
+    overflow-y: auto;
+}
+.projectBox img {
+    width: 100%;
+    height: auto;
+}
+.projectBox .closeBtn {
+    display: none;
+}
+.projectBox .headline {
+    margin: 0 15px;
+}
+.projectBox p {
+    margin: 15px 2.5%;
+}
+.projectBox .projectTitle {
+    margin: 5px;
+}
+.projectBox .toolsTitle {
+    text-align: center;
+}
+.projectBox .toolsUsed {
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.projectBox li {
+    font-size: 1.6rem;
+    list-style: none;
+    background-color:#1dd1a1;
+    padding: 3px 7px;
+    margin: 0 5px;
+    border-radius: 7px;
+}
+.projectBox .projectLink {
+    color: #1c2025;
+    text-decoration-color: var(--darkGreen);
+    transition: color 200ms;
+}
+.projectBox .projectLink:hover {
+    color: var(--darkGreen);
+}
+
+.activeProjectBox {
+    position: fixed;
+    left: 25vw; 
+    top: 10vh; 
+    height: 80vh; 
+    width: 50vw;
+}
+.activeStyle .closeBtn {
+    position: absolute;
+    display: flex;
+    justify-content: center; align-items: center;
+    right: 10px;
+    top: 10px;
+    background-color: #1dd1a1;
+    height: 48px; width: 48px;
+    border: 3px solid black;
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity 300ms;
+}
+.ActiveProjectBox .closeBtn img {
+    height: 80%; width: 80%;
+}
+
+.hiddenText {
+    display: none;
+}
+
+.activeStyle .hiddenText {
+    display: block;
+}
+.activeStyle .visibleText {
+    display: none;
+} */
+
 .rotateSect {
     position: absolute;
     content: ' ';
