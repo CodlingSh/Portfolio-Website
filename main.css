@@ -420,9 +420,9 @@ p:not(:last-child) {
     max-width: 855px;
 }
 
-#projectSect {
-    max-width: min-content;
-}
+/* #projectSect { */
+    /* max-width: min-content; */
+/* } */
 
 #contact {
     position: relative;
@@ -486,10 +486,12 @@ p:not(:last-child) {
 
 #projects_grid_container {
     display: grid;
-    grid-template-columns: repeat(1, 380px);
+    grid-template-columns: repeat(1, 100%);
     grid-auto-rows: 1fr;
     row-gap: 40px;
     column-gap: 40px;
+    max-width: 380px;
+    margin: 0 auto;
 }
 
 .project {
@@ -759,7 +761,16 @@ footer {
 footer p {
     text-align: center;
 }
+
 @media only screen and (min-width: 880px) {
+    #projectSect {
+        width: fit-content;
+    }
+
+    #projects_grid_container {
+        max-width: none;
+    }
+
     #projects_grid_container {
         grid-template-columns: repeat(2, 380px);
     }
