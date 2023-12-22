@@ -394,15 +394,8 @@ p:not(:last-child) {
     
 }
 
-.underSect {
-    /* position: absolute; */
-    position: relative;
-    bottom: 20px;
-    height: 70px; width: 100%;
-    z-index: -1;
-    background-color: green;
-    clip-path: polygon(0 0, 100% 60px, 100% 100%, 0 calc(100% - 60px));
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 calc(100% - 60px));
+#about {
+    padding-top: 0;
 }
 
 .innerSectContainer {
