@@ -31,17 +31,6 @@ html {
     display: none;
 }
 
-/* ~~~ Custom Font Set Up ~~~ */
-/*@font-face {
-    font-family: 'Ubuntu';
-    src: url('fonts/Ubuntu-Bold.woff2') format('woff2'),
-        url('fonts/Ubuntu-Bold.woff') format('woff'),
-        url('fonts/Ubuntu-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: fallback;
-}*/
-
 @font-face {
     font-family: 'Ubuntu';
     src: url('fonts/Ubuntu-Medium.woff2') format('woff2'),
@@ -218,7 +207,7 @@ header {
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: calc(100vh - 52px);
+    min-height: calc(100svh - 52px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,17 +266,12 @@ p:not(:last-child) {
 }
 
 .heroBtn {
-    /* min-width: 170px; */
     width: 160px;
     background-color: #292f36;
     color: #fff;
     box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#1c2025 0 -3px 0 inset;
     justify-content: center;
 }
-/* .heroBtn p {
-    width: 100%;
-    text-align: center;
-} */
 .heroBtn:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #1c2025 0 -3px 0 inset;
 } 
@@ -335,12 +319,9 @@ p:not(:last-child) {
 }
 
 #introText {
-    /* background-color: #292f36; */
     color: #292f36;
     border-radius: 15px;
     width: 100%;
-    /* padding: 10px; */
-    /* margin-right: 20px; */
 }
 #introText h1 {
     font-size: 2.8rem;
@@ -360,7 +341,6 @@ p:not(:last-child) {
     --skew-angle: 5deg;
     --background: #f5f6fa;
     position: relative;
-    /* isolation: isolate; */
 }
 .mainSect::after {
     content: ' ';
@@ -412,10 +392,6 @@ p:not(:last-child) {
 #skillSect {
     max-width: 855px;
 }
-
-/* #projectSect { */
-    /* max-width: min-content; */
-/* } */
 
 #contact {
     position: relative;
@@ -525,11 +501,7 @@ p:not(:last-child) {
     top: 20px;
     right: 20px;
     height: 48px !important; width: 48px;
-    /* border: none; */
     border-radius: 50%;
-    /* background-color: #1dd1a1; */
-    /* font-size: 24px; */
-
 }
 .tools_title {
     text-align: center;
@@ -538,7 +510,6 @@ p:not(:last-child) {
     display: flex;
     height: 100%;
 }
-
 
 .projectBtn {
     bottom: 10px;
@@ -573,7 +544,6 @@ p:not(:last-child) {
 }
 
 .hiddenText {
-    /* display: none !important; */
     height: 0px;
     visibility: hidden;
 }
@@ -614,8 +584,6 @@ p:not(:last-child) {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* margin-bottom: 30px; */
-    /* margin: 0 auto; */
 }
 
 #formContainer {
