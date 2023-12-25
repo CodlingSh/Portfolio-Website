@@ -283,6 +283,10 @@ p:not(:last-child) {
     margin-right: 15px;
 }
 
+.page_loaded > * {
+    
+}
+
 #outerHexagon {
     position: relative;
     display: flex;
