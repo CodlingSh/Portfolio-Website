@@ -3,6 +3,12 @@ const menuBtn = document.getElementById("navBtn");
 const dimOverlays = Array.from(document.getElementsByClassName("dimmingOverlay"));
 const yearSpan = document.getElementById("currentYear");//Copyright year at bottom of page
 
+const animateHeroSect = () => {
+    const heroSect = document.getElementById("landing");
+
+    heroSect.classList.add("page_loaded");
+}
+
 const toggleDim = () => {
     const dimOverlays = Array.from(document.getElementsByClassName("dimmingOverlay"));
     const currentOpacity = window.getComputedStyle(document.getElementsByClassName("dimmingOverlay")[0]).opacity;
@@ -252,3 +258,4 @@ Array.from(document.getElementsByClassName("linkMobile")).concat(Array.from(docu
 });
 // Listen for scrolling to change the color of navigation links
 window.addEventListener("scroll", throttle(scrollFunction, 250));
+window.addEventListener("load", () => setTimeout(animateHeroSect, 100));
