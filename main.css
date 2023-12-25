@@ -370,9 +370,10 @@ p:not(:last-child) {
     
 }
 
-#about {
-    padding-top: 0;
-}
+/* #about {
+    position: relative;
+    top: 75px;
+} */
 
 .innerSectContainer {
     width: 95vw;
