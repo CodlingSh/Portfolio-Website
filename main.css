@@ -335,12 +335,11 @@ p:not(:last-child) {
 }
 .mainSect:not(:last-child) {
     --skew-angle: 5deg;
-    --background: #f5f6fa;
+    --background: #eaedf0;
     position: relative;
 }
 .mainSect::after {
     content: ' ';
-    background-color: var(--background);
     position: absolute;
     z-index: -1;
     inset: 0;
