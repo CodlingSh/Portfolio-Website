@@ -341,6 +341,7 @@ p:not(:last-child) {
 .mainSect::after {
     content: ' ';
     position: absolute;
+    background-color: var(--background);
     z-index: -1;
     inset: 0;
     transform: skewY(var(--skew-angle));
