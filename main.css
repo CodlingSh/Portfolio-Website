@@ -21,6 +21,7 @@ html {
     --hexMaxHeight: calc(var(--hexMaxWidth) * 1.1526644736842);
     --darkGreen: #10ac84;
     --triangleHeight: calc((100vw / 2) * sin(5 * (3.14159 / 180)));
+    --background: #eaedf0;
 }
 
 .mobile {
@@ -74,7 +75,7 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
-    background-color: #f5f6fa !important;
+    background-color: var(--background);
     overflow-x: hidden;
     width: 100vw;
     z-index: 1;
@@ -335,7 +336,6 @@ p:not(:last-child) {
 }
 .mainSect:not(:last-child) {
     --skew-angle: 5deg;
-    --background: #eaedf0;
     position: relative;
 }
 .mainSect::after {
