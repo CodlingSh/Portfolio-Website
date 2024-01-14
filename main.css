@@ -71,7 +71,7 @@ body > * {
 }
 
 body {
-    font-family: "ubuntu", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
@@ -617,6 +617,7 @@ form input[type="text"], form textarea {
     padding: 12px;
     border-radius: 15px;
     font-size: 1.6rem;
+    font-family: inherit;
 }
 form input[type="text"]:focus, form textarea:focus {
     border: 5px solid #10ac84;
