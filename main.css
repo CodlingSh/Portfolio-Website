@@ -341,11 +341,13 @@ p:not(:last-child) {
 .mainSect::after {
     content: ' ';
     position: absolute;
-    background-color: var(--background);
     z-index: -1;
     inset: 0;
     transform: skewY(var(--skew-angle));
     border-bottom: 25px solid var(--darkGreen);
+}
+.mainSect:not(:last-child)::after {
+    background-color: var(--background);
 }
 .mainSect:nth-last-child(-n+2)::after {
     border-bottom: none;
